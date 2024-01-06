@@ -18,7 +18,7 @@
 	},
 	"mdl": {
 		"part_name": {
-			"path": "windows.obj",
+			"load": ["windows.obj"],
 			"texture": "texture_name"
 		}
 	}
