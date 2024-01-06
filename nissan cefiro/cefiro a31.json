@@ -2,10 +2,10 @@
 	"model_informations": {
 		"model": "cefiro A31",
 		"brand": "nissan",
-		"length": "469.0 meters",
-		"width": "169.5 meters",
-		"height": "137.5 meters",
-		"wheelbase": "267.0 meters",
+		"length": 469.0,
+		"width": 169.5,
+		"height": 137.5,
+		"wheelbase": 267.0,
 		"weight": "1360 kg"
 	},
 	"texPath": "https://raw.githubusercontent.com/NekerSqu4w/obj_file/main/nissan cefiro/textures/",
