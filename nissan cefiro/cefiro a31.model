@@ -1,0 +1,25 @@
+{
+	"model_informations": {
+		"model": "cefiro A31",
+		"brand": "nissan",
+		"length": 469.0,
+		"width": 169.5,
+		"height": 137.5,
+		"wheelbase": 267.0,
+		"weight": "1360 kg"
+	},
+	"texPath": "https://raw.githubusercontent.com/NekerSqu4w/obj_file/main/nissan cefiro/textures/",
+	"mdlPath": "https://raw.githubusercontent.com/NekerSqu4w/obj_file/main/nissan cefiro/models/",
+	"tex": {
+		"texture_name": {
+			"diffuse": {"path": "diffuse.png","flags": 8448,"alpha": 1},
+			"normal": {"path": "normal.png","flags": 8448,"alpha": 1}
+		}
+	},
+	"mdl": {
+		"part_name": {
+			"path": "windows.obj",
+			"texture": "texture_name"
+		}
+	}
+}
