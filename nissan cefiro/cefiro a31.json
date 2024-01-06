@@ -11,17 +11,17 @@
 	"texPath": "https://raw.githubusercontent.com/NekerSqu4w/obj_file/main/nissan cefiro/textures/",
 	"mdlPath": "https://raw.githubusercontent.com/NekerSqu4w/obj_file/main/nissan cefiro/models/",
 	"tex": {
-		"texture_name": {
+		"windows": {
 			"diffuse": "diffuse.png",
 			"normal": "normal.png",
 			"flags": 8448,
-			"alpha": 1
+			"alpha": 0.37
 		}
 	},
 	"mdl": {
 		"part_name": {
 			"load": ["windows.obj"],
-			"texture": "texture_name"
+			"texture": "windows"
 		}
 	}
 }
