@@ -12,6 +12,10 @@
 	"mdlPath": "https://raw.githubusercontent.com/NekerSqu4w/obj_file/main/nissan cefiro/models/",
 	"tex": {
 		"windows": {
+			"flags": 256,
+			"alpha": 0.37
+		},
+		"EXAMPLE": {
 			"diffuse": "diffuse.png",
 			"normal": "normal.png",
 			"flags": 8448,
