@@ -84,6 +84,10 @@
 		"steering_wheel": {
 			"load": ["steering_wheel.obj"],
 			"texture": "interior"
+		},
+		"needle": {
+			"load": ["needle.obj","needle.obj"],
+			"texture": "interior"
 		}
 	}
 }
