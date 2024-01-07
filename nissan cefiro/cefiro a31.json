@@ -11,7 +11,8 @@
 	"texPath": "https://raw.githubusercontent.com/NekerSqu4w/obj_file/main/nissan cefiro/textures/",
 	"mdlPath": "https://raw.githubusercontent.com/NekerSqu4w/obj_file/main/nissan cefiro/models/",
 	"tex": {
-		"windows": {
+		"paint": {
+			"diffuse": "carpaint.png",
 			"flags": 8192
 		},
 		"EXAMPLE": {
@@ -22,8 +23,8 @@
 	},
 	"mdl": {
 		"part_name": {
-			"load": ["windows.obj"],
-			"texture": "windows"
+			"load": ["bumper f and r.obj.obj"],
+			"texture": "paint"
 		}
 	}
 }
