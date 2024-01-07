@@ -56,7 +56,7 @@
 			"modifiers": [{"type": "remap.uv","settings": {"scale": 0.2}}]
 		},
 		"interior": {
-			"load": ["interior/brake.obj","interior/interior.obj","interior/seat.obj"],
+			"load": ["interior/brake.obj","interior/interior.obj","interior/seat.obj","interior/dashboard_needle_back_part.obj"],
 			"texture": "interior"
 		},
 		"mirror": {
