@@ -16,7 +16,7 @@
 		},
 		"interior": {
 			"diffuse": "interior.png",
-			"flags": 8192
+			"flags": 256
 		},
 		"EXAMPLE": {
 			"diffuse": "diffuse.png",
