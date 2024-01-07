@@ -24,7 +24,7 @@
 		"body": {
 			"load": ["door.obj","fender.obj","front bumper.obj","rear bumper.obj","hood.obj","skirt.obj","trunk.obj","mirror_part.obj","spoiler.obj"],
 			"texture": "carpaint",
-			"modifiers": [{"type": "remap.uv","settings": {"scale": 4}}]
+			"modifiers": [{"type": "remap.uv","settings": {"scale": 2}}]
 		}
 	}
 }
