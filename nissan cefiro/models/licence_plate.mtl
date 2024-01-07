@@ -1,12 +1,12 @@
 # Blender 4.0.2 MTL File: 'cefiro a31.blend'
 # www.blender.org
 
-newmtl black
+newmtl license_plate
 Ns 20.000006
 Ka 1.000000 1.000000 1.000000
-Kd 0.015686 0.015686 0.015686
-Ks 0.980000 0.980000 0.980000
+Ks 0.000000 0.000000 0.000000
 Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 1.000000
-illum 3
+illum 1
+map_Kd C:/Users/sahwa/Pictures/logo/1000df027d.png

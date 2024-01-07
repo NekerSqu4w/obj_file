@@ -17,6 +17,9 @@
 		"blackpaint": {
 			"diffuse": "$default:phoenix_storms/mat/mat_phx_metallic2"
 		},
+		"mirror": {
+			"diffuse": "$default:debug/env_cubemap_model"
+		},
 		"interior": {
 			"diffuse": "interior.png",
 			"flags": 256
@@ -24,6 +27,10 @@
 		"window": {
 			"diffuse": "$default:phoenix_storms/grey_chrome",
 			"flags": 8192
+		},
+		"licence_plate": {
+			"diffuse": "licence_plate_d.png",
+			"normal": "licence_plate_n.png"
 		},
 		"EXAMPLE": {
 			"diffuse": "diffuse.png",
@@ -33,7 +40,7 @@
 	},
 	"mdl": {
 		"body": {
-			"load": ["body/door.obj","body/fender.obj","body/front bumper.obj","body/rear bumper.obj","body/hood.obj","body/skirt.obj","body/trunk.obj","body/mirror_part.obj","body/spoiler.obj"],
+			"load": ["body/door.obj","body/fender.obj","body/front bumper.obj","body/rear bumper.obj","body/hood.obj","body/skirt.obj","body/trunk.obj","body/mirror_part.obj","body/spoiler.obj","body/body_stitches.obj"],
 			"texture": "carpaint",
 			"modifiers": [{"type": "remap.uv","settings": {"scale": 0.2}}]
 		},
@@ -46,9 +53,17 @@
 			"load": ["interior/brake.obj","interior/interior.obj","interior/seat.obj"],
 			"texture": "interior"
 		},
+		"mirror": {
+			"load": ["mirror.obj"],
+			"texture": "mirror"
+		},
 		"windows": {
-			"load": ["window.obj"],
+			"load": ["window.obj","light_glass.obj"],
 			"texture": "window"
+		},
+		"licence_plate": {
+			"load": ["licence_plate.obj"],
+			"texture": "licence_plate"
 		}
 	}
 }
