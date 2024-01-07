@@ -89,5 +89,19 @@
 			"load": ["needle.obj","needle.obj"],
 			"texture": "interior"
 		}
+	},
+	"BONES_SOON": {
+		"steering_wheel_bone": {
+			"position": {"x": -14,"y": 13.5,"z": 25.4},
+			"rotation": {"pitch": 65,"yaw": 0,"roll": 0}
+		},
+		"rpm_needle": {
+			"position": {"x": -23.2,"y": 15.2,"z": 27.35},
+			"rotation": {"pitch": 77,"yaw": 0,"roll": 0}
+		},
+		"kmh_needle": {
+			"position": {"x": -23.2,"y": 11.1,"z": 27.35},
+			"rotation": {"pitch": 77,"yaw": 0,"roll": 0}
+		}
 	}
 }
