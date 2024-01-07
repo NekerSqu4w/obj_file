@@ -12,8 +12,7 @@
 	"mdlPath": "https://raw.githubusercontent.com/NekerSqu4w/obj_file/main/nissan cefiro/models/",
 	"tex": {
 		"carpaint": {
-			"diffuse": "$default:phoenix_storms/mat/mat_phx_metallic2",
-			"flags": 8192
+			"diffuse": "$default:phoenix_storms/mat/mat_phx_metallic2"
 		},
 		"EXAMPLE": {
 			"diffuse": "diffuse.png",
@@ -24,7 +23,8 @@
 	"mdl": {
 		"body": {
 			"load": ["door.obj","fender.obj","front bumper.obj","rear bumper.obj","hood.obj","skirt.obj","trunk.obj","mirror_part.obj","spoiler.obj"],
-			"texture": "carpaint"
+			"texture": "carpaint",
+			"modifiers": [{"type": "remap.uv","settings": {"scale": 4}}]
 		}
 	}
 }
