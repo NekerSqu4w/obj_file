@@ -22,7 +22,7 @@
 	},
 	"mdl": {
 		"bumper": {
-			"load": ["bumper f and r.obj"],
+			"load": ["body.obj"],
 			"texture": "carpaint"
 		}
 	}
