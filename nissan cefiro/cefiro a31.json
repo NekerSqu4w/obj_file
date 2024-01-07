@@ -15,7 +15,8 @@
 			"diffuse": "$default:phoenix_storms/mat/mat_phx_metallic2"
 		},
 		"interior": {
-			"diffuse": "interior.png"
+			"diffuse": "interior.png",
+			"flags": 8192
 		},
 		"EXAMPLE": {
 			"diffuse": "diffuse.png",
