@@ -22,8 +22,8 @@
 		}
 	},
 	"mdl": {
-		"part_name": {
-			"load": ["bumper f and r.obj.obj"],
+		"bumper": {
+			"load": ["bumper f and r.obj"],
 			"texture": "paint"
 		}
 	}
