@@ -28,6 +28,12 @@
 			"diffuse": "$default:phoenix_storms/grey_chrome",
 			"flags": 8192
 		},
+		"front_light": {
+			"diffuse": "lights_front.png"
+		},
+		"back_light": {
+			"diffuse": "lights_rear.png"
+		},
 		"licence_plate": {
 			"diffuse": "licence_plate_d.png",
 			"normal": "licence_plate_n.png"
@@ -45,7 +51,7 @@
 			"modifiers": [{"type": "remap.uv","settings": {"scale": 0.2}}]
 		},
 		"misc": {
-			"load": ["misc/car_floor.obj","misc/engine_bay.obj","misc/exhaust.obj","misc/door_stitches.obj","misc/other.obj"],
+			"load": ["misc/car_floor.obj","misc/engine_bay.obj","misc/exhaust.obj","misc/door_stitches.obj","misc/other.obj","misc/light_support.obj"],
 			"texture": "blackpaint",
 			"modifiers": [{"type": "remap.uv","settings": {"scale": 0.2}}]
 		},
@@ -64,6 +70,14 @@
 		"licence_plate": {
 			"load": ["licence_plate.obj"],
 			"texture": "licence_plate"
+		},
+		"back_light": {
+			"load": ["back_light.obj"],
+			"texture": "back_light"
+		},
+		"front_light": {
+			"load": ["front_light.obj"],
+			"texture": "front_light"
 		}
 	}
 }
