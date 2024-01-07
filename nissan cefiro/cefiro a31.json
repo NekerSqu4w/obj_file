@@ -20,7 +20,7 @@
 		},
 		"window": {
 			"diffuse": "$default:phoenix_storms/grey_chrome",
-			"flags": 256
+			"flags": 8192
 		},
 		"EXAMPLE": {
 			"diffuse": "diffuse.png",
