@@ -25,18 +25,20 @@
 			"flags": 256
 		},
 		"window": {
-			"diffuse": "$default:phoenix_storms/grey_chrome",
-			"flags": 8192
+			"diffuse": "$default:phoenix_storms/grey_chrome"
 		},
 		"front_light": {
-			"diffuse": "lights_front.png"
+			"diffuse": "lights_front.png",
+			"flags": 256
 		},
 		"back_light": {
-			"diffuse": "lights_rear.png"
+			"diffuse": "lights_rear.png",
+			"flags": 256
 		},
 		"licence_plate": {
 			"diffuse": "licence_plate_d.png",
-			"normal": "licence_plate_n.png"
+			"normal": "licence_plate_n.png",
+			"flags": 256
 		},
 		"EXAMPLE": {
 			"diffuse": "diffuse.png",
