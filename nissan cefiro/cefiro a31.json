@@ -14,6 +14,9 @@
 		"carpaint": {
 			"diffuse": "$default:phoenix_storms/mat/mat_phx_metallic2"
 		},
+		"interior": {
+			"diffuse": "interior.png"
+		},
 		"EXAMPLE": {
 			"diffuse": "diffuse.png",
 			"normal": "normal.png",
@@ -22,9 +25,13 @@
 	},
 	"mdl": {
 		"body": {
-			"load": ["door.obj","fender.obj","front bumper.obj","rear bumper.obj","hood.obj","skirt.obj","trunk.obj","mirror_part.obj","spoiler.obj"],
+			"load": ["body/door.obj","body/fender.obj","body/front bumper.obj","body/rear bumper.obj","body/hood.obj","body/skirt.obj","body/trunk.obj","body/mirror_part.obj","body/spoiler.obj"],
 			"texture": "carpaint",
 			"modifiers": [{"type": "remap.uv","settings": {"scale": 0.1}}]
+		},
+		"interior": {
+			"load": ["interior/brake.obj","interior/interior.obj","interior/seat.obj"],
+			"texture": "interior"
 		}
 	}
 }
