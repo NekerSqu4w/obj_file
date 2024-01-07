@@ -25,8 +25,7 @@
 			"flags": 256
 		},
 		"window": {
-			"diffuse": "$default:phoenix_storms/grey_chrome",
-			"flags": 8192
+			"diffuse": "$default:phoenix_storms/grey_chrome"
 		},
 		"front_light": {
 			"diffuse": "lights_front.png",
@@ -68,7 +67,8 @@
 		},
 		"windows": {
 			"load": ["window.obj","light_glass.obj"],
-			"texture": "window"
+			"texture": "window",
+			"modifiers": [{"type": "remap.face","settings": {"inside": 1}}]
 		},
 		"licence_plate": {
 			"load": ["licence_plate.obj"],
