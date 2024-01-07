@@ -40,10 +40,10 @@
 			"normal": "licence_plate_n.png",
 			"flags": 256
 		},
-		"EXAMPLE": {
-			"diffuse": "diffuse.png",
-			"normal": "normal.png",
-			"flags": 8192
+		"tyre": {
+			"diffuse": "tyre_d.png",
+			"normal": "tyre_n.png",
+			"flags": 256
 		}
 	},
 	"mdl": {
@@ -80,6 +80,10 @@
 		"front_light": {
 			"load": ["front_light.obj"],
 			"texture": "front_light"
+		},
+		"steering_wheel": {
+			"load": ["steering_wheel.obj"],
+			"texture": "interior"
 		}
 	}
 }
