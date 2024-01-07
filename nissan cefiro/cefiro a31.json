@@ -22,7 +22,7 @@
 	},
 	"mdl": {
 		"bumper": {
-			"load": ["body.obj"],
+			"load": ["door.obj","fender.obj","front bumper.obj","rear bumper.obj","hood.obj","skirt.obj","trunk.obj"],
 			"texture": "carpaint"
 		}
 	}
