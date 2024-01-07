@@ -25,7 +25,8 @@
 			"flags": 256
 		},
 		"window": {
-			"diffuse": "$default:phoenix_storms/grey_chrome"
+			"diffuse": "$default:phoenix_storms/grey_chrome",
+			"flags": 8192
 		},
 		"front_light": {
 			"diffuse": "lights_front.png",
