@@ -12,6 +12,7 @@
 	"mdlPath": "https://raw.githubusercontent.com/NekerSqu4w/obj_file/main/nissan cefiro/models/",
 	"tex": {
 		"carpaint": {
+			"diffuse": "$default:phoenix_storms/mat/mat_phx_metallic2",
 			"flags": 8192
 		},
 		"EXAMPLE": {
