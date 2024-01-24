@@ -1,6 +1,6 @@
 {
 	"textures": "https://raw.githubusercontent.com/NekerSqu4w/obj_file/main/nissan cefiro/textures.json",
-	"models": "https://raw.githubusercontent.com/NekerSqu4w/obj_file/main/nissan cefiro/models.json",
+	"models": "https://raw.githubusercontent.com/NekerSqu4w/obj_file/main/nissan cefiro/models/",
 	"bones": {
 		"base": {"position": {"x": 0,"y": 0,"z": 0},"rotation": {"pitch": 0,"yaw": 0,"roll": 0}},
 		"steering_wheel": {"position": {"x": -14,"y": 13.5,"z": 25.4},"rotation": {"pitch": 65,"yaw": 0,"roll": 0}},
