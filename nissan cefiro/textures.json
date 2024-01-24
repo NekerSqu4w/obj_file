@@ -1,36 +1,45 @@
 {
-    "folder": "https://raw.githubusercontent.com/NekerSqu4w/obj_file/main/nissan cefiro/textures",
+    "folder": "https://raw.githubusercontent.com/NekerSqu4w/obj_file/main/nissan cefiro/textures/",
     "textures": {
         "carpaint": {
+            "type": "VertexLitGeneric",
             "diffuse": "$default:phoenix_storms/mat/mat_phx_metallic2"
         },
         "blackpaint": {
+            "type": "VertexLitGeneric",
             "diffuse": "$default:phoenix_storms/mat/mat_phx_metallic2"
         },
         "mirror": {
+            "type": "VertexLitGeneric",
             "diffuse": "$default:debug/env_cubemap_model"
         },
         "interior": {
+            "type": "VertexLitGeneric",
             "diffuse": "interior.png",
             "flags": 256
         },
         "window": {
+            "type": "VertexLitGeneric",
             "diffuse": "$default:phoenix_storms/grey_chrome"
         },
         "front_light": {
+            "type": "VertexLitGeneric",
             "diffuse": "lights_front.png",
             "flags": 256
         },
         "back_light": {
+            "type": "VertexLitGeneric",
             "diffuse": "lights_rear.png",
             "flags": 256
         },
         "licence_plate": {
+            "type": "VertexLitGeneric",
             "diffuse": "licence_plate_d.png",
             "normal": "licence_plate_n.png",
             "flags": 256
         },
         "tyre": {
+            "type": "VertexLitGeneric",
             "diffuse": "tyre_d.png",
             "normal": "tyre_n.png",
             "flags": 256
