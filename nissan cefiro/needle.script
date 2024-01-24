@@ -1,6 +1,6 @@
 // based on lua scripting languages
 
-function model(name,obj,bone,variable)
+return function(name,obj,bone,variable)
     //name return current model name 'in this case it's 'RPMneedle' or 'KMHneedle''
     //obj return the current obj entity
     //bone return the bones entity
@@ -14,5 +14,3 @@ function model(name,obj,bone,variable)
         obj:setAngles(bone:localToWorldAngles(Angle(0,-variable.kmhAngle,0)))
     end
 end
-
-return model
