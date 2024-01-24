@@ -1,0 +1,12 @@
+// based on lua scripting languages
+
+function model(name,obj,bone,variable)
+    //name return current model name 'in this case it's 'steering_wheel''
+    //obj return the current obj entity
+    //bone return the bones entity
+    //variable return serverside variable (you can use serverSideVar.yourVariablename if you need too) (this work also with local/nonlocal variable)
+
+    obj:setAngles(bone:localToWorldAngles(Angle(0,-(variable.smoothsteeringAng / 20) * 350,0)))
+end
+
+return model

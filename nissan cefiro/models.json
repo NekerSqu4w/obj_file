@@ -1,0 +1,9 @@
+{
+    "folder": "https://raw.githubusercontent.com/NekerSqu4w/obj_file/main/nissan cefiro/models",
+    "models": [
+		"body/door.obj","body/fender.obj","body/front bumper.obj","body/rear bumper.obj","body/hood.obj","body/skirt.obj","body/trunk.obj","body/mirror_part.obj","body/spoiler.obj","body/body_stitches.obj",
+		"misc/car_floor.obj","misc/engine_bay.obj","misc/exhaust.obj","misc/door_stitches.obj","misc/other.obj","misc/light_support.obj",
+		"interior/brake.obj","interior/interior.obj","interior/seat.obj","interior/dashboard_needle_back_part.obj",
+		"mirror.obj","window.obj","light_glass.obj","licence_plate.obj","back_light.obj","front_light.obj","steering_wheel.obj","needle.obj"
+	]
+}

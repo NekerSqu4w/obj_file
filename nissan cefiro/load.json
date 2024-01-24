@@ -1,0 +1,73 @@
+{
+	"textures": "https://raw.githubusercontent.com/NekerSqu4w/obj_file/main/nissan cefiro/textures.json",
+	"models": "https://raw.githubusercontent.com/NekerSqu4w/obj_file/main/nissan cefiro/models.json",
+	"bones": {
+		"base": {"position": {"x": 0,"y": 0,"z": 0},"rotation": {"pitch": 0,"yaw": 0,"roll": 0}},
+		"steering_wheel": {"position": {"x": -14,"y": 13.5,"z": 25.4},"rotation": {"pitch": 65,"yaw": 0,"roll": 0}},
+		"rpm_needle": {"position": {"x": -23.2,"y": 15.2,"z": 27.35},"rotation": {"pitch": 77,"yaw": 0,"roll": 0}},
+		"kmh_needle": {"position": {"x": -23.2,"y": 11.1,"z": 27.35},"rotation": {"pitch": 77,"yaw": 0,"roll": 0}}
+	},
+	"map_models": {
+		"body": {
+			"load": ["body/door.obj","body/fender.obj","body/front bumper.obj","body/rear bumper.obj","body/hood.obj","body/skirt.obj","body/trunk.obj","body/mirror_part.obj","body/spoiler.obj","body/body_stitches.obj"],
+			"texture": "carpaint",
+			"modifiers": [{"type": "remap.uv","settings": {"scale": 0.2}}],
+			"bone": "base"
+		},
+		"misc": {
+			"load": ["misc/car_floor.obj","misc/engine_bay.obj","misc/exhaust.obj","misc/door_stitches.obj","misc/other.obj","misc/light_support.obj"],
+			"texture": "blackpaint",
+			"modifiers": [{"type": "remap.uv","settings": {"scale": 0.2}}],
+			"bone": "base"
+		},
+		"interior": {
+			"load": ["interior/brake.obj","interior/interior.obj","interior/seat.obj","interior/dashboard_needle_back_part.obj"],
+			"texture": "interior",
+			"bone": "base"
+		},
+		"mirror": {
+			"load": ["mirror.obj"],
+			"texture": "mirror",
+			"bone": "base"
+		},
+		"windows": {
+			"load": ["window.obj","light_glass.obj"],
+			"texture": "window",
+			"modifiers": [{"type": "remap.face","settings": {"inside": 1}}],
+			"bone": "base"
+		},
+		"licence_plate": {
+			"load": ["licence_plate.obj"],
+			"texture": "licence_plate",
+			"bone": "base"
+		},
+		"back_light": {
+			"load": ["back_light.obj"],
+			"texture": "back_light",
+			"bone": "base"
+		},
+		"front_light": {
+			"load": ["front_light.obj"],
+			"texture": "front_light",
+			"bone": "base"
+		},
+		"steering_wheel": {
+			"load": ["steering_wheel.obj"],
+			"texture": "interior",
+			"bone": "steering_wheel",
+			"script": "steering_wheel.script"
+		},
+		"RPMneedle": {
+			"load": ["needle.obj"],
+			"texture": "interior",
+			"bone": "rpm_needle",
+			"script": "needle.script"
+		},
+		"KMHneedle": {
+			"load": ["needle.obj"],
+			"texture": "interior",
+			"bone": "kmh_needle",
+			"script": "needle.script"
+		}
+	}
+}

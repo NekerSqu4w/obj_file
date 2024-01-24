@@ -1,0 +1,18 @@
+// based on lua scripting languages
+
+function model(name,obj,bone,variable)
+    //name return current model name 'in this case it's 'RPMneedle' or 'KMHneedle''
+    //obj return the current obj entity
+    //bone return the bones entity
+    //variable return serverside variable (you can use serverSideVar.yourVariablename if you need too) (this work also with local/nonlocal variable)
+
+    if name == "RPMneedle" then
+        obj:setAngles(bone:localToWorldAngles(Angle(0,-variable.rpmAngle,0)))
+    end
+
+    if name == "KMHneedle" then
+        obj:setAngles(bone:localToWorldAngles(Angle(0,-variable.kmhAngle,0)))
+    end
+end
+
+return model
