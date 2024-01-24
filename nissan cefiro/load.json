@@ -55,19 +55,19 @@
 			"load": ["steering_wheel.obj"],
 			"texture": "interior",
 			"bone": "steering_wheel",
-			"script": "steering_wheel.script"
+			"script": "https://raw.githubusercontent.com/NekerSqu4w/obj_file/main/nissan cefiro/steering_wheel.script"
 		},
 		"RPMneedle": {
 			"load": ["needle.obj"],
 			"texture": "interior",
 			"bone": "rpm_needle",
-			"script": "needle.script"
+			"script": "https://raw.githubusercontent.com/NekerSqu4w/obj_file/main/nissan cefiro/needle.script"
 		},
 		"KMHneedle": {
 			"load": ["needle.obj"],
 			"texture": "interior",
 			"bone": "kmh_needle",
-			"script": "needle.script"
+			"script": "https://raw.githubusercontent.com/NekerSqu4w/obj_file/main/nissan cefiro/needle.script"
 		}
 	}
 }
