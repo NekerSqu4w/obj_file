@@ -4,7 +4,7 @@ return function(name,obj,bone,variable)
     //name return current model name 'in this case it's 'steering_wheel''
     //obj return the current obj entity
     //bone return the bones entity
-    //variable return serverside variable (you can use serverSideVar.yourVariablename if you need too) (this work also with local/nonlocal variable)
+    //variable return local variable setup inside of updateVariable()
 
     obj:setAngles(bone:localToWorldAngles(Angle(0,-(variable.smoothsteeringAng / 20) * 350,0)))
 end
