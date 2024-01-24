@@ -1,6 +1,6 @@
---@include https://raw.githubusercontent.com/NekerSqu4w/obj_file/main/SCRIPT/meshlib/modifiers/remap.face.txt as remapface
---@include https://raw.githubusercontent.com/NekerSqu4w/obj_file/main/SCRIPT/meshlib/modifiers/remap.uv.txt as remapuv
---@include https://raw.githubusercontent.com/NekerSqu4w/obj_file/main/SCRIPT/meshlib/modifiers/remesh.voxelize.txt as remeshvoxelize
+--@include https://raw.githubusercontent.com/NekerSqu4w/obj_file/main/SCRIPT/meshlib/modifiers/remap_face.txt as remapface
+--@include https://raw.githubusercontent.com/NekerSqu4w/obj_file/main/SCRIPT/meshlib/modifiers/remap_uv.txt as remapuv
+--@include https://raw.githubusercontent.com/NekerSqu4w/obj_file/main/SCRIPT/meshlib/modifiers/remesh_voxelize.txt as remeshvoxelize
 
 local meshLib = class("meshLib")
 meshLib.canLoadNextMesh = 20 // total model can be loaded at once
