@@ -1,0 +1,86 @@
+local function checkQ(n) return quotaAverage() < quotaMax() * n end
+local function yieldCheck() if not checkQ(0.1) then coroutine.yield() end end
+
+local function modifier(controller, modelId, vertices, inverted, rndInside, smoothrad)
+    smoothrad = math.cos(smoothrad or 0.4)
+    
+    /* APPLY SMOOTH NORMAL */
+    if smoothrad ~= 1 then
+        controller.newInfo(controller,modelId,"process.applymod.remap_face","Applying smooth edge..")
+                
+        local norms = setmetatable({},{__index = function(t,k) local r=setmetatable({},{__index=function(t,k) local r=setmetatable({},{__index=function(t,k) local r={} t[k]=r return r end}) t[k]=r return r end}) t[k]=r return r end})
+        for _, vertex in ipairs(vertices) do
+            local pos = vertex.pos
+            local norm = norms[pos[1]][pos[2]][pos[3]]
+            norm[#norm+1] = vertex.normal
+            
+            yieldCheck()
+        end
+    
+        for _, vertex in ipairs(vertices) do
+            local normal = Vector()
+            local count = 0
+            local pos = vertex.pos
+    
+            for _, norm in ipairs(norms[pos[1]][pos[2]][pos[3]]) do
+                if vertex.normal:dot(norm) >= smoothrad then
+                    normal:add(norm)
+                    count = count + 1
+                end
+                
+                yieldCheck()
+            end
+
+            if count > 1 then
+                normal:div(count)
+                vertex.normal = normal
+            end
+            
+            yieldCheck()
+        end
+    end
+    
+    /* INVERT FACE */
+    if inverted then
+        controller.newInfo(controller,modelId,"process.applymod.remap_face","Inverting face..")
+        for i=1, #vertices-2, 3 do
+            local a = vertices[i]
+            local b = vertices[i + 1]
+            local c = vertices[i + 2]
+            
+            vertices[i] = a
+            vertices[i + 1] = c
+            vertices[i + 2] = b
+            
+            a.normal = -a.normal
+            b.normal = -b.normal
+            c.normal = -c.normal
+            
+            yieldCheck()
+        end
+    end
+    
+    /* APPLY INSIDE FACE */
+    if rndInside then
+        controller.newInfo(controller,modelId,"process.applymod.remap_face","[remap.face] Generated face inside..")
+        for i=1, #vertices, 3 do
+            local a = table.copy(vertices[i])
+            local b = table.copy(vertices[i + 1])
+            local c = table.copy(vertices[i + 2])
+            
+            a.normal = -a.normal
+            b.normal = -b.normal
+            c.normal = -c.normal
+
+            table.insert(vertices,a)
+            table.insert(vertices,c)
+            table.insert(vertices,b)
+            
+            yieldCheck()
+        end
+    end
+    
+    return vertices
+end
+
+return function(verts, controller, mdlId, settings) return modifier(verts, controller, mdlId, settings.inverted or false, settings.inside or false, settings.smooth or 3.14) end

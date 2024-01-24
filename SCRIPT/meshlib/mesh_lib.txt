@@ -1,0 +1,214 @@
+--@includedir modifiers
+
+local meshLib = class("meshLib")
+meshLib.canLoadNextMesh = 20 // total model can be loaded at once
+meshLib.waitingList = {}
+meshLib.generatedMesh = {}
+meshLib.activeThread = {}
+meshLib.modifiers = requiredir("modifiers")
+
+// create mesh controller
+function meshLib:initialize()
+    self.ongenerated = function() end
+    self.meshSetup = {}
+    //self.boundMin = Vector(-10000000,-10000000,-10000000)
+    //self.boundMax = Vector(10000000,10000000,10000000)
+    self.meshInfo = {verticesCount=0,facesCount=0}
+    self.activeModifiers = {}
+    
+    self.preGenerate = function(verts) return verts end
+    self.postGenerate = function(verts) return verts end
+    self.newInfo = function() end
+    return self
+end
+
+// setup mesh
+function meshLib:pushObj(data)
+    table.insert(self.meshSetup,{type="obj",data=data})
+end
+function meshLib:pushVerts(data)
+    table.insert(self.meshSetup,{type="verts",data=data})
+end
+function meshLib:pushModel(data)
+    table.insert(self.meshSetup,{type="model",data=data})
+end
+
+// mesh modifiers
+function meshLib:addModifiers(type,settings)
+    local alreadyAdded = false
+    for id, mod in pairs(self.activeModifiers) do
+        if type == mod.type then alreadyAdded = true end
+    end
+
+    if alreadyAdded == false then
+        table.insert(self.activeModifiers,{
+            type = type,
+            settings = settings
+        })
+    end
+end
+function meshLib:removeModifiers(type)
+    for id, mod in pairs(self.activeModifiers) do
+        if type == mod.type then table.remove(self.activeModifiers,id) end
+    end
+end
+
+// called before mesh modifiers
+function meshLib:preGenerate(pregeneratefunc)
+    self.preGenerate = pregeneratefunc or function(verts) return verts end
+end
+
+// called after mesh modifiers
+function meshLib:postGenerate(postgeneratefunc)
+    self.postGenerate = postgeneratefunc or function(verts) return verts end
+end
+
+// called after mesh state change
+function meshLib:newInfo(infofunc)
+    self.newInfo = infofunc or function() end
+end
+
+// start building the final mesh
+function meshLib:build(ongenerated)
+    self.ongenerated = ongenerated or self.ongenerated
+
+    for id, setup in pairs(self.meshSetup) do
+        if setup.type == "obj" then
+            local modId = bit.tableToString(self.activeModifiers)
+            local modelId = http.base64Encode("meshLib.meshId."..#setup.data.."."..modId..timer.curtime()..#meshLib.waitingList)
+
+            table.insert(meshLib.waitingList,{modelId=modelId,controller=self,ongenerated=self.ongenerated,buildFromObj=setup.data})
+        end
+        if setup.type == "verts" then
+            local modId = bit.tableToString(self.activeModifiers)
+            local modelId = http.base64Encode("meshLib.meshId."..#setup.data.."."..modId..timer.curtime()..#meshLib.waitingList)
+
+            table.insert(meshLib.waitingList,{modelId=modelId,controller=self,ongenerated=self.ongenerated,buildFromVert=setup.data})
+        end
+        if setup.type == "model" then
+            local modId = bit.tableToString(self.activeModifiers)
+            local modelId = http.base64Encode("meshLib.meshId."..#setup.data.."."..modId)
+
+            table.insert(meshLib.waitingList,{modelId=modelId,controller=self,ongenerated=self.ongenerated,buildFromMdl=setup.data})
+        end
+    end
+end
+
+
+
+/* mesh process */
+local function checkQ(n) return math.max(quotaAverage(), quotaUsed()) < quotaMax() * n end
+local function yieldCheck() if not checkQ(0.2) then coroutine.yield() end end
+hook.add("think","meshLib.generatemesh",function()
+    local ToGen = meshLib.waitingList[1]
+    local ID = timer.curtime()
+
+    if ToGen and meshLib.canLoadNextMesh > 0 then
+        local MESH_THREAD = coroutine.create(function()
+            local verts = {}
+            local faces = {}
+            //local boundMin = Vector(1500000,1500000,1500000)
+            //local boundMax = Vector(-1500000,-1500000,-1500000)
+            
+            if ToGen.buildFromObj then
+                ToGen.controller.newInfo(ToGen.controller,ToGen.modelId,"decode.obj","Decoding obj data..")
+                local tdata, _ = mesh.parseObj(ToGen.buildFromObj,true,true)
+
+                for id, mdat in pairs(tdata) do
+                    table.merge(verts,mdat)
+                    yieldCheck()
+                end
+                
+            elseif ToGen.buildFromVert then
+                ToGen.controller.newInfo(ToGen.controller,ToGen.modelId,"decode.verts","Decoding vertices data..")
+                verts = ToGen.buildFromVert
+            elseif ToGen.buildFromMdl then
+                ToGen.controller.newInfo(ToGen.controller,ToGen.modelId,"decode.mdl","Decoding model data..")
+                local modelData = mesh.getModelMeshes(ToGen.buildFromMdl, 0, 0)
+                
+                for id, mdat in pairs(modelData) do
+                    for id2, mdat2 in pairs(mdat.triangles) do
+                        mdat2.weights = nil
+                        table.insert(verts,mdat2)
+                        yieldCheck()
+                    end
+                end
+            else
+            end
+                
+            // apply modifiers
+            verts = ToGen.controller.preGenerate(verts) or verts
+            for id, mod in pairs(ToGen.controller.activeModifiers) do
+                if mod.settings and mod.type and meshLib.modifiers["lib/meshlib/modifiers/"..mod.type..".txt"] then
+                    ToGen.controller.newInfo(ToGen.controller,ToGen.modelId,"process.applymod." .. mod.type:replace(".","_"),"Applying modifiers: " .. mod.type)
+                    verts = meshLib.modifiers["lib/meshlib/modifiers/"..mod.type..".txt"](ToGen.controller,ToGen.modelId,verts,mod.settings)
+                end
+            end
+            verts = ToGen.controller.postGenerate(verts) or verts
+                
+            // divide all verts into multiple mesh
+            local TOTALVERTICES = #verts
+            ToGen.newVertices = verts
+            ToGen.targetNextVertices = TOTALVERTICES
+            
+            ToGen.controller.meshInfo.verticesCount = TOTALVERTICES
+            ToGen.controller.meshInfo.facesCount = TOTALVERTICES / 3
+            
+            local splitAT = 65535 // the maximum allowed by gmod is 65535
+            local splitCount = 1
+            local splitTodo = math.floor((TOTALVERTICES / splitAT) + 1)
+                
+            if TOTALVERTICES >= splitAT then
+                // do spliting
+                ToGen.controller.newInfo(ToGen.controller,ToGen.modelId,"process.split","Spliting model..")
+                
+                ToGen.newVertices = {}
+                for i=1, TOTALVERTICES, 3 do
+                    table.insert(ToGen.newVertices,verts[i])
+                    table.insert(ToGen.newVertices,verts[i+1])
+                    local count = table.insert(ToGen.newVertices,verts[i+2])
+                    
+                    local loadRatio = math.floor((#ToGen.newVertices / ToGen.targetNextVertices) * 100)
+                    if loadRatio % 5 == 0 then ToGen.controller.newInfo(ToGen.controller,ToGen.modelId,"process.split."..splitCount,"Split " .. splitCount .. "/" .. splitTodo,loadRatio) end
+                    
+                    if count >= splitAT or count >= ToGen.targetNextVertices then
+                        // generate the new mesh
+                        ToGen.controller.newInfo(ToGen.controller,ToGen.modelId,"process.split."..splitCount..".generating_mesh","Generating mesh from vertices list.")
+                        
+                        ToGen.sendMesh = mesh.createFromTable(ToGen.newVertices,true) // big ram usage, due to mesh in memory
+                        ToGen.ongenerated(ToGen.controller,ToGen.modelId,ToGen.sendMesh)
+                            
+                        ToGen.targetNextVertices = TOTALVERTICES - i - 2
+                        splitCount = splitCount + 1
+                        ToGen.newVertices = {}
+                    end
+                    
+                    yieldCheck()
+                end
+                    
+            else
+                ToGen.controller.newInfo(ToGen.controller,ToGen.modelId,"process.generating_mesh","Generating mesh from vertices list.")
+                
+                ToGen.sendMesh = mesh.createFromTable(ToGen.newVertices,true)
+                ToGen.ongenerated(ToGen.controller,ToGen.modelId,ToGen.sendMesh)
+            end
+            
+            ToGen.controller.newInfo(ToGen.controller,ToGen.modelId,"process.end","Process finished on success !")
+            meshLib.canLoadNextMesh = meshLib.canLoadNextMesh + 1
+        end)
+
+        table.insert(meshLib.activeThread,MESH_THREAD)
+        table.remove(meshLib.waitingList,1)
+        meshLib.canLoadNextMesh = meshLib.canLoadNextMesh - 1
+    end
+    
+    /* UPDATE ACTIVE THREAD */
+    for _, thread in pairs(meshLib.activeThread) do
+        for _=1, 20 do
+            if coroutine.status(thread) ~= "dead" and checkQ(0.15) then coroutine.resume(thread) end
+        end
+    end
+end)
+/* */
+
+return meshLib

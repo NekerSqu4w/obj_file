@@ -1,0 +1,32 @@
+local function checkQ(n) return math.max(quotaAverage(), quotaUsed()) < quotaMax() * n end
+local function yieldCheck() if not checkQ(0.1) then coroutine.yield() end end
+
+local function modifier(controller, modelId, vertices, scale)
+    local v = Vector()
+    local a = Angle()
+    local cross = function(a,b) return a:cross(b) end
+
+    local function uv(vertex, ang)
+        local p = worldToLocal(vertex.pos, a, v, ang)
+        vertex.u = p.y * scale
+        vertex.v = p.z * scale
+    end
+
+    controller.newInfo(controller,modelId,"process.applymod.remap_uv","Remapping uvs..")
+    for i = 1, #vertices - 2, 3 do
+        local a = vertices[i]
+        local b = vertices[i + 1]
+        local c = vertices[i + 2]
+        local ang = cross(b.pos - a.pos, c.pos - a.pos):getAngle()
+
+        uv(a, ang)
+        uv(b, ang)
+        uv(c, ang)
+        
+        yieldCheck()
+    end
+    
+    return vertices
+end
+
+return function(verts, controller,modelId, settings) return modifier(verts, controller,modelId, settings.scale or 1) end

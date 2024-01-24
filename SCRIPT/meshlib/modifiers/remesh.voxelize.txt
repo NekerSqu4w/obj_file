@@ -1,0 +1,210 @@
+local function addFace(vert, v1, v2, v3, v4)
+    table.insert(vert, {pos = v1, u = 0, v = 1, normal = Vector(1,1,1)})
+    table.insert(vert, {pos = v2, u = 1, v = 1, normal = Vector(1,1,1)})
+    table.insert(vert, {pos = v3, u = 0, v = 0, normal = Vector(1,1,1)})
+    
+    table.insert(vert, {pos = v2, u = 1, v = 1, normal = Vector(1,1,1)})
+    table.insert(vert, {pos = v4, u = 1, v = 0, normal = Vector(1,1,1)})
+    table.insert(vert, {pos = v3, u = 0, v = 0, normal = Vector(1,1,1)})
+end
+local function cube(pos,size,face)
+    local cubeVert = {}
+    
+    if face.back then
+        -- BACK face
+        addFace(cubeVert,
+            pos + Vector(0, 0, 0),
+            pos + Vector(0, size.y, 0),
+            pos + Vector(0, 0, size.z),
+            pos + Vector(0, size.y, size.z)
+        )
+    end
+    
+    if face.front then
+        -- FRONT face
+        addFace(cubeVert,
+            pos + Vector(size.x, size.y, 0),
+            pos + Vector(size.x, 0, 0),
+            pos + Vector(size.x, size.y, size.z),
+            pos + Vector(size.x, 0, size.z)
+        )
+    end
+    
+    if face.top then
+        -- TOP face
+        addFace(cubeVert,
+            pos + Vector(0, 0, size.z),
+            pos + Vector(0, size.y, size.z),
+            pos + Vector(size.x, 0, size.z),
+            pos + Vector(size.x, size.x, size.z)
+        )
+    end
+    
+    if face.bottom then
+        -- BOTTOM face
+        addFace(cubeVert,
+            pos + Vector(0, size.y, 0),
+            pos + Vector(0, 0, 0),
+            pos + Vector(size.x, size.y, 0),
+            pos + Vector(size.x, 0, 0)
+        )
+    end
+    
+    if face.right then
+        -- RIGHT face
+        addFace(cubeVert,
+            pos + Vector(size.x, 0, 0),
+            pos + Vector(0, 0, 0),
+            pos + Vector(size.x, 0, size.z),
+            pos + Vector(0, 0, size.z)
+        )
+    end
+    
+    if face.left then
+        -- LEFT
+        addFace(cubeVert,
+            pos + Vector(0, size.y, 0),
+            pos + Vector(size.x, size.y, 0),
+            pos + Vector(0, size.y, size.z),
+            pos + Vector(size.x, size.y, size.z)
+        )
+    end
+    
+    return cubeVert
+end
+
+
+local function insertToGrid(voxel_grid, pos, uvpos)    
+    if not voxel_grid[pos.x] then voxel_grid[pos.x] = {} end
+    if not voxel_grid[pos.x][pos.y] then voxel_grid[pos.x][pos.y] = {} end
+    if not voxel_grid[pos.x][pos.y][pos.z] then
+        voxel_grid[pos.x][pos.y][pos.z] = {
+            pos = pos,
+            uvpos = uvpos
+        }
+    end
+end
+local function getVoxel(voxel_grid, pos)
+    if voxel_grid[pos.x] and voxel_grid[pos.x][pos.y] and voxel_grid[pos.x][pos.y][pos.z] then return voxel_grid[pos.x][pos.y][pos.z] end
+    return nil
+end
+
+local function insertCube(inside, grid, offset, scaling, uvpos)
+    local addface = {
+        top = true,
+        bottom = true,
+        right = true,
+        left = true,
+        back = true,
+        front = true
+    }
+    
+    // check for each face
+    if getVoxel(grid, offset+Vector(0,0,scaling*2)) then addface.top = false end
+    if getVoxel(grid, offset-Vector(0,0,scaling*2)) then addface.bottom = false end
+    if getVoxel(grid, offset+Vector(scaling*2,0,0)) then addface.front = false end
+    if getVoxel(grid, offset-Vector(scaling*2,0,0)) then addface.back = false end
+    if getVoxel(grid, offset+Vector(0,scaling*2,0)) then addface.left = false end
+    if getVoxel(grid, offset-Vector(0,scaling*2,0)) then addface.right = false end
+    
+    local newCube = cube(offset - Vector(1) * scaling,Vector(2,2,2) * scaling,addface)
+    
+    // modify cube vertices
+    for i=1, #newCube, 3 do
+        local a = newCube[i]
+        local b = newCube[i + 1]
+        local c = newCube[i + 2]
+        
+        // setup the uv pos
+        a.u = uvpos.u
+        a.v = uvpos.v
+        b.u = uvpos.u
+        b.v = uvpos.v
+        c.u = uvpos.u
+        c.v = uvpos.v
+        
+        // setup the normal map
+        local norm = (c.pos - a.pos):cross(b.pos - a.pos)
+        norm:normalize()
+        a.normal = norm
+        b.normal = norm
+        c.normal = norm
+        
+        table.insert(inside, a)
+        table.insert(inside, b)
+        table.insert(inside, c)
+    end
+end
+
+local function scaleVector(vec, scaling)
+    local vector = Vector()
+    vector.x = math.floor(vec.x / scaling) * scaling
+    vector.y = math.floor(vec.y / scaling) * scaling
+    vector.z = math.floor(vec.z / scaling) * scaling
+    return vector
+end
+
+local function interpolateBarycentric(t1, t2, t3, v1, v2, v3)
+    return t1 * v1 + t2 * v2 + t3 * v3
+end
+
+local function checkQ(n) return math.max(quotaAverage(), quotaUsed()) < quotaMax() * n end
+local function yieldCheck() if not checkQ(0.1) then coroutine.yield() end end
+
+local function insertCubeInsideTriangle(voxel_grid, a, b, c, scaling)
+    local resX = a.pos:getDistance(b.pos) / scaling
+    local resY = b.pos:getDistance(c.pos) / scaling
+    
+    for i=0, resX do
+        for j=0, resY do
+            local t1 = i / resX
+            local t2 = j / resY
+            local t3 = 1 - t1 - t2
+            
+            if t1 + t2 <= 1 then
+                local centerUv = {
+                    u = interpolateBarycentric(t1, t2, t3, a.u, b.u, c.u),
+                    v = interpolateBarycentric(t1, t2, t3, a.v, b.v, c.v)
+                }
+                
+                local interpolatedPos = interpolateBarycentric(t1, t2, t3, a.pos, b.pos, c.pos)
+                local normPos = scaleVector(interpolatedPos, scaling * 2)
+                insertToGrid(voxel_grid, normPos, centerUv)
+            end
+            
+            yieldCheck()
+        end
+    end
+end
+
+local function modifier(controller, modelId, vertices, scaling)
+    local voxel_grid = {}
+    local voxel_vertices = {}
+    
+    local trianglesCount = math.floor(1 + (#vertices-2) / 3)
+    for i=1, #vertices-2, 3 do
+        local a = vertices[i]
+        local b = vertices[i + 1]
+        local c = vertices[i + 2]
+        
+        local loadRatio = math.floor((i / (#vertices-2)) * 100)
+        if loadRatio % 5 == 0 then controller.newInfo(controller,modelId,"process.applymod.remesh_voxelize.process_triangles","Processing triangles",loadRatio) end
+        insertCubeInsideTriangle(voxel_grid, a, b, c, scaling)
+        
+        coroutine.yield()
+    end
+    
+    controller.newInfo(controller,modelId,"process.applymod.remesh_voxelize.insert_cube","Inserting cube..")
+    for x, gridX in pairs(voxel_grid) do
+        for y, gridY in pairs(gridX) do
+            for z, grid in pairs(gridY) do
+                insertCube(voxel_vertices, voxel_grid, grid.pos, scaling, grid.uvpos)
+                yieldCheck()
+            end
+        end
+    end
+    
+    return voxel_vertices
+end
+
+return function(controller, mdlId, verts, settings) return modifier(controller, mdlId, verts, settings.scaling or 1) end
