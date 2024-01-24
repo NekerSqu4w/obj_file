@@ -2,15 +2,12 @@
     "folder": "https://raw.githubusercontent.com/NekerSqu4w/obj_file/main/nissan cefiro/textures/",
     "textures": {
         "carpaint": {
-            "type": "VertexLitGeneric",
             "diffuse": "$default:phoenix_storms/mat/mat_phx_metallic2"
         },
         "blackpaint": {
-            "type": "VertexLitGeneric",
             "diffuse": "$default:phoenix_storms/mat/mat_phx_metallic2"
         },
         "mirror": {
-            "type": "VertexLitGeneric",
             "diffuse": "$default:debug/env_cubemap_model"
         },
         "interior": {
@@ -19,7 +16,6 @@
             "flags": 256
         },
         "window": {
-            "type": "VertexLitGeneric",
             "diffuse": "$default:phoenix_storms/grey_chrome"
         },
         "front_light": {
