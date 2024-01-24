@@ -12,13 +12,15 @@
 			"load": ["body/door.obj","body/fender.obj","body/front bumper.obj","body/rear bumper.obj","body/hood.obj","body/skirt.obj","body/trunk.obj","body/mirror_part.obj","body/spoiler.obj","body/body_stitches.obj"],
 			"texture": "carpaint",
 			"modifiers": [{"type": "remap.uv","settings": {"scale": 0.2}}],
-			"bone": "base"
+			"bone": "base",
+			"color": {"r": "$bodyColor.r$","g": "$bodyColor.g$","b": "$bodyColor.b$","a": 255}
 		},
 		"misc": {
 			"load": ["misc/car_floor.obj","misc/engine_bay.obj","misc/exhaust.obj","misc/door_stitches.obj","misc/other.obj","misc/light_support.obj"],
 			"texture": "blackpaint",
 			"modifiers": [{"type": "remap.uv","settings": {"scale": 0.2}}],
-			"bone": "base"
+			"bone": "base",
+			"color": {"r": 0,"g": 0,"b": 0,"a": 255}
 		},
 		"interior": {
 			"load": ["interior/brake.obj","interior/interior.obj","interior/seat.obj","interior/dashboard_needle_back_part.obj"],
@@ -34,7 +36,8 @@
 			"load": ["window.obj","light_glass.obj"],
 			"texture": "window",
 			"modifiers": [{"type": "remap.face","settings": {"inside": 1}}],
-			"bone": "base"
+			"bone": "base",
+			"color": {"r": 0,"g": 0,"b": 0,"a": 150}
 		},
 		"licence_plate": {
 			"load": ["licence_plate.obj"],
