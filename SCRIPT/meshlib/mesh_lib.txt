@@ -1,6 +1,6 @@
---@include https://raw.githubusercontent.com/NekerSqu4w/obj_file/main/SCRIPT/meshlib/modifiers/remap.face.txt as remap.face.txt
---@include https://raw.githubusercontent.com/NekerSqu4w/obj_file/main/SCRIPT/meshlib/modifiers/remap.uv.txt as remap.uv.txt
---@include https://raw.githubusercontent.com/NekerSqu4w/obj_file/main/SCRIPT/meshlib/modifiers/remesh.voxelize.txt as remesh.voxelize.txt
+--@include https://raw.githubusercontent.com/NekerSqu4w/obj_file/main/SCRIPT/meshlib/modifiers/remap.face.txt as remapface
+--@include https://raw.githubusercontent.com/NekerSqu4w/obj_file/main/SCRIPT/meshlib/modifiers/remap.uv.txt as remapuv
+--@include https://raw.githubusercontent.com/NekerSqu4w/obj_file/main/SCRIPT/meshlib/modifiers/remesh.voxelize.txt as remeshvoxelize
 
 local meshLib = class("meshLib")
 meshLib.canLoadNextMesh = 20 // total model can be loaded at once
@@ -8,9 +8,9 @@ meshLib.waitingList = {}
 meshLib.generatedMesh = {}
 meshLib.activeThread = {}
 meshLib.modifiers = {}
-meshLib.modifiers["remap.face"] = require("remap.face.txt")
-meshLib.modifiers["remap.uv"] = require("remap.uv.txt")
-meshLib.modifiers["remesh.voxelize"] = require("remesh.voxelize.txt")
+meshLib.modifiers["remap.face"] = require("remapface")
+meshLib.modifiers["remap.uv"] = require("remapuv")
+meshLib.modifiers["remesh.voxelize"] = require("remeshvoxelize")
 
 // create mesh controller
 function meshLib:initialize()
