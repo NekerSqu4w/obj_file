@@ -26,8 +26,7 @@
 			"load": ["misc/exhaust.obj"],
 			"texture": "exhaust",
 			"modifiers": [{"type": "remap.uv","settings": {"scale": 0.1}}],
-			"bone": "base",
-			"script": "https://raw.githubusercontent.com/NekerSqu4w/obj_file/main/nissan cefiro/exhaust.script"
+			"bone": "base"
 		},
 		"interior": {
 			"load": ["interior/brake.obj","interior/interior.obj","interior/seat.obj","interior/dashboard_needle_back_part.obj"],
