@@ -16,11 +16,18 @@
 			"color": {"r": "$bodyColor.r$","g": "$bodyColor.g$","b": "$bodyColor.b$","a": 255}
 		},
 		"misc": {
-			"load": ["misc/car_floor.obj","misc/engine_bay.obj","misc/exhaust.obj","misc/door_stitches.obj","misc/other.obj","misc/light_support.obj"],
+			"load": ["misc/car_floor.obj","misc/engine_bay.obj","misc/door_stitches.obj","misc/other.obj","misc/light_support.obj"],
 			"texture": "blackpaint",
 			"modifiers": [{"type": "remap.uv","settings": {"scale": 0.2}}],
 			"bone": "base",
 			"color": {"r": 0,"g": 0,"b": 0,"a": 255}
+		},
+		"exhaust": {
+			"load": ["misc/exhaust.obj"],
+			"texture": "exhaust",
+			"modifiers": [{"type": "remap.uv","settings": {"scale": 0.2}}],
+			"bone": "base",
+			"script": "https://raw.githubusercontent.com/NekerSqu4w/obj_file/main/nissan cefiro/exhaust.script"
 		},
 		"interior": {
 			"load": ["interior/brake.obj","interior/interior.obj","interior/seat.obj","interior/dashboard_needle_back_part.obj"],

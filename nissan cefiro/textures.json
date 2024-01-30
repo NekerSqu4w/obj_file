@@ -7,6 +7,9 @@
         "blackpaint": {
             "diffuse": "$default:phoenix_storms/mat/mat_phx_metallic2"
         },
+        "exhaust": {
+            "diffuse": "$default: sprops/textures/sprops_metal2"
+        },
         "mirror": {
             "diffuse": "$default:debug/env_cubemap_model"
         },
