@@ -26,7 +26,8 @@
 			"load": ["misc/exhaust.obj"],
 			"texture": "exhaust",
 			"modifiers": [{"type": "remap.uv","settings": {"scale": 0.1}}],
-			"bone": "base"
+			"bone": "base",
+			"color": {"r": 150,"g": 150,"b": 150,"a": 255}
 		},
 		"interior": {
 			"load": ["interior/brake.obj","interior/interior.obj","interior/seat.obj","interior/dashboard_needle_back_part.obj"],
