@@ -16,10 +16,12 @@ local function addParticle(variable)
 end
 
 return function(name,obj,bone,variable)
-    ParticleEmitter:setPos(chip():getPos()) // move emitter
+    if variable.smoothRpmRatio > 0 then
+        ParticleEmitter:setPos(chip():getPos()) // move emitter
 
-    if ParticleEmitter:getParticlesLeft() > 0 and timer.curtime() > nextFire then
-        addParticle(variable)
-        nextFire = timer.curtime() + 0.1 - variable.smoothRpmRatio * 0.1
+        if ParticleEmitter:getParticlesLeft() > 0 and timer.curtime() > nextFire then
+            addParticle(variable)
+            nextFire = timer.curtime() + 0.1 - variable.smoothRpmRatio * 0.1
+        end
     end
 end
