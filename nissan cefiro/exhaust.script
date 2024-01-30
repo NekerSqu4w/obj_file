@@ -17,10 +17,10 @@ end
 
 return function(name,obj,bone,variable)
     if variable.smoothRpmRatio > 0 then
-        ParticleEmitter:setPos(bone:getPos()) // move emitter
-
+        ParticleEmitter:setPos(obj:getPos()) // move emitter
+        
         if ParticleEmitter:getParticlesLeft() > 0 and timer.curtime() > nextFire then
-            addParticle(bone,variable)
+            addParticle(obj,variable)
             nextFire = timer.curtime() + 0.1 - variable.smoothRpmRatio * 0.1
         end
     end

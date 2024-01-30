@@ -25,7 +25,7 @@
 		"exhaust": {
 			"load": ["misc/exhaust.obj"],
 			"texture": "exhaust",
-			"modifiers": [{"type": "remap.uv","settings": {"scale": 0.2}}],
+			"modifiers": [{"type": "remap.uv","settings": {"scale": 0.1}}],
 			"bone": "base",
 			"script": "https://raw.githubusercontent.com/NekerSqu4w/obj_file/main/nissan cefiro/exhaust.script"
 		},
