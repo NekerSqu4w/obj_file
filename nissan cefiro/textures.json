@@ -11,7 +11,7 @@
             "diffuse": "$default:sprops/textures/sprops_metal2"
         },
         "mirror": {
-            "diffuse": "$default:debug/env_cubemap_model"
+            "diffuse": "$viewport:mirror"
         },
         "interior": {
             "type": "VertexLitGeneric",
