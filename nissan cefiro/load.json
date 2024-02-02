@@ -8,7 +8,9 @@
 		"kmh_needle": {"position": {"x": -23.2,"y": 11.1,"z": 27.35},"rotation": {"pitch": 77,"yaw": 0,"roll": 0}}
 	},
 	"viewports": {
-		"mirror": {"position": {"x": 80,"y": 0,"z": 30},"rotation": {"pitch": 0,"yaw": 0,"roll": 0}}
+		"mirror_center": {"position": {"x": -10,"y": 0,"z": 30},"rotation": {"pitch": 0,"yaw": 0,"roll": 0}},
+		"mirror_left": {"position": {"x": -40,"y": 0,"z": 25},"rotation": {"pitch": 0,"yaw": 0,"roll": 0}},
+		"mirror_right": {"position": {"x": -40,"y": 0,"z": 25},"rotation": {"pitch": 0,"yaw": 0,"roll": 0}}
 	},
 	"map_models": {
 		"body": {
@@ -37,9 +39,19 @@
 			"texture": "interior",
 			"bone": "base"
 		},
-		"mirror": {
-			"load": ["mirror.obj"],
-			"texture": "mirror",
+		"mirror_center": {
+			"load": ["mirror/mirror_center.obj"],
+			"texture": "mirror_center",
+			"bone": "base"
+		},
+		"mirror_left": {
+			"load": ["mirror/mirror_left.obj"],
+			"texture": "mirror_left",
+			"bone": "base"
+		},
+		"mirror_right": {
+			"load": ["mirror/mirror_right.obj"],
+			"texture": "mirror_right",
 			"bone": "base"
 		},
 		"windows": {

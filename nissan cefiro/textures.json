@@ -10,9 +10,6 @@
         "exhaust": {
             "diffuse": "$default:sprops/textures/sprops_metal2"
         },
-        "mirror": {
-            "diffuse": "$viewports:mirror"
-        },
         "interior": {
             "type": "VertexLitGeneric",
             "diffuse": "interior.png",
@@ -42,6 +39,9 @@
             "diffuse": "tyre_d.png",
             "normal": "tyre_n.png",
             "flags": 256
-        }
+        },
+        "mirror_center": {"diffuse": "$viewports:mirror_center"},
+        "mirror_left": {"diffuse": "$viewports:mirror_left"},
+        "mirror_right": {"diffuse": "$viewports:mirror_right"}
     }
 }
