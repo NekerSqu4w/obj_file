@@ -2,13 +2,13 @@
 	"textures": "https://raw.githubusercontent.com/NekerSqu4w/obj_file/main/nissan cefiro/textures.json",
 	"models": "https://raw.githubusercontent.com/NekerSqu4w/obj_file/main/nissan cefiro/models/",
 	"bones": {
-		"base": {"position": {"x": 0,"y": 0,"z": 0},"rotation": {"pitch": 0,"yaw": 0,"roll": 0}},
-		"steering_wheel": {"position": {"x": -15.9537,"y": 14.3,"z": 24.0307},"rotation": {"pitch": -25,"yaw": 0,"roll": 0}},
-		"rpm_needle": {"position": {"x": -23.2,"y": 11.9689,"z": 27.4302},"rotation": {"pitch": 0,"yaw": 0,"roll": 0}},
-		"kmh_needle": {"position": {"x": -23.2,"y": 16.1379,"z": 27.4302},"rotation": {"pitch": 0,"yaw": 0,"roll": 0}},
-		"mirror_center": {"position": {"x": -11.7377,"y": 0.260551,"z": 40.0683},"rotation": {"pitch": 4.2,"yaw": 10.192,"roll": 14.845}},
-		"mirror_left": {"position": {"x": -22.7584,"y": -33.4222,"z": 31.0988},"rotation": {"pitch": 0,"yaw": -1.1,"roll": -10}},
-		"mirror_right": {"position": {"x": -22.7584,"y": 33.4222,"z": 31.0988},"rotation": {"pitch": 0,"yaw": 1.1,"roll": -10}}
+		"base": {"position": {"x": 0,"y": 0,"z": 0},"rotation": {"x": 0,"y": 0,"z": 0}},
+		"steering_wheel": {"position": {"x": -15.9537,"y": 14.3,"z": 24.0307},"rotation": {"x": 0,"y": -25,"z": 0}},
+		"rpm_needle": {"position": {"x": -23.2,"y": 11.9689,"z": 27.4302},"rotation": {"x": 0,"y": -15,"z": 0}},
+		"kmh_needle": {"position": {"x": -23.2,"y": 16.1379,"z": 27.4302},"rotation": {"x": 0,"y": -15,"z": 0}},
+		"mirror_center": {"position": {"x": -11.7377,"y": 0.260551,"z": 40.0683},"rotation": {"x": 4.2,"y": 10.192,"z": 14.845}},
+		"mirror_left": {"position": {"x": -22.7584,"y": -33.4222,"z": 31.0988},"rotation": {"x": 0,"y": -1.1,"z": -10}},
+		"mirror_right": {"position": {"x": -22.7584,"y": 33.4222,"z": 31.0988},"rotation": {"x": 0,"y": 1.1,"z": -10}}
 	},
 	"viewports": {
 		"mirror_center": {"bone": "mirror_center"},
