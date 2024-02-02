@@ -6,5 +6,5 @@ return function(name,obj,bone,variable)
     //bone return the bones entity
     //variable return local variable setup inside of updateVariable()
 
-    obj:setAngles(bone:localToWorldAngles(Angle(-(variable.smoothsteeringAng / 20) * 350,0,0)))
+    obj:setAngles(bone:localToWorldAngles(Angle((variable.smoothsteeringAng / 20) * 350,0,0)))
 end
