@@ -7,6 +7,9 @@
 		"rpm_needle": {"position": {"x": -23.2,"y": 15.2,"z": 27.35},"rotation": {"pitch": 77,"yaw": 0,"roll": 0}},
 		"kmh_needle": {"position": {"x": -23.2,"y": 11.1,"z": 27.35},"rotation": {"pitch": 77,"yaw": 0,"roll": 0}}
 	},
+	"viewports": {
+		"mirror": {"position": {"x": 60,"y": 0,"z": 20},"rotation": {"pitch": 0,"yaw": 180,"roll": 0}}
+	},
 	"map_models": {
 		"body": {
 			"load": ["body/door.obj","body/fender.obj","body/front bumper.obj","body/rear bumper.obj","body/hood.obj","body/skirt.obj","body/trunk.obj","body/mirror_part.obj","body/spoiler.obj","body/body_stitches.obj"],

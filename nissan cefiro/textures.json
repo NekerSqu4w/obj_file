@@ -11,7 +11,7 @@
             "diffuse": "$default:sprops/textures/sprops_metal2"
         },
         "mirror": {
-            "diffuse": "$viewport:mirror"
+            "diffuse": "$viewports:mirror"
         },
         "interior": {
             "type": "VertexLitGeneric",
