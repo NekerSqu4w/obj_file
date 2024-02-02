@@ -4,11 +4,11 @@
 	"bones": {
 		"base": {"position": {"x": 0,"y": 0,"z": 0},"rotation": {"x": 0,"y": 0,"z": 0}},
 		"steering_wheel": {"position": {"x": -15.9537,"y": 14.3,"z": 24.0307},"rotation": {"x": 0,"y": -15,"z": 0}},
-		"kmh_needle": {"position": {"x": -23.2,"y": 11.9689,"z": 27.4302},"rotation": {"x": 0,"y": -20,"z": 0}},
-		"rpm_needle": {"position": {"x": -23.2,"y": 16.1379,"z": 27.4302},"rotation": {"x": 0,"y": -20,"z": 0}},
-		"mirror_center": {"position": {"x": -11.7377,"y": 0.260551,"z": 40.0683},"rotation": {"x": 0,"y": 7,"z": 14.1588}},
-		"mirror_left": {"position": {"x": -22.7584,"y": -33.4222,"z": 31.0988},"rotation": {"x": 0,"y": 0,"z": 10}},
-		"mirror_right": {"position": {"x": -22.7584,"y": 33.4222,"z": 31.0988},"rotation": {"x": 0,"y": 0,"z": -10}}
+		"kmh_needle": {"position": {"x": -23.2,"y": 11.9689,"z": 27.4302},"rotation": {"x": 0,"y": -25,"z": 0}},
+		"rpm_needle": {"position": {"x": -23.2,"y": 16.1379,"z": 27.4302},"rotation": {"x": 0,"y": -25,"z": 0}},
+		"mirror_center": {"position": {"x": -7,"y": 0,"z": -75},"rotation": {"x": 0,"y": 7,"z": 14.1588}},
+		"mirror_left": {"position": {"x": 0,"y": 0,"z": -80},"rotation": {"x": 0,"y": 0,"z": 10}},
+		"mirror_right": {"position": {"x": 0,"y": 0,"z": -100},"rotation": {"x": 0,"y": 0,"z": -10}}
 	},
 	"viewports": {
 		"mirror_center": {"bone": "mirror_center"},
