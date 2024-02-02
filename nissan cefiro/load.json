@@ -40,6 +40,7 @@
 		"mirror": {
 			"load": ["mirror.obj"],
 			"texture": "mirror",
+			"modifiers": [{"type": "remap.uv","settings": {"invert": true}}],
 			"bone": "base"
 		},
 		"windows": {
