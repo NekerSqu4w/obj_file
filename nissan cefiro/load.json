@@ -3,14 +3,17 @@
 	"models": "https://raw.githubusercontent.com/NekerSqu4w/obj_file/main/nissan cefiro/models/",
 	"bones": {
 		"base": {"position": {"x": 0,"y": 0,"z": 0},"rotation": {"pitch": 0,"yaw": 0,"roll": 0}},
-		"steering_wheel": {"position": {"x": -14,"y": 13.5,"z": 25.4},"rotation": {"pitch": 65,"yaw": 0,"roll": 0}},
-		"rpm_needle": {"position": {"x": -23.2,"y": 15.2,"z": 27.35},"rotation": {"pitch": 77,"yaw": 0,"roll": 0}},
-		"kmh_needle": {"position": {"x": -23.2,"y": 11.1,"z": 27.35},"rotation": {"pitch": 77,"yaw": 0,"roll": 0}}
+		"steering_wheel": {"position": {"x": -15.9537,"y": 14.3,"z": 24.0307},"rotation": {"pitch": -25,"yaw": 0,"roll": 0}},
+		"rpm_needle": {"position": {"x": -23.2,"y": 11.9689,"z": 27.4302},"rotation": {"pitch": 0,"yaw": 0,"roll": 0}},
+		"kmh_needle": {"position": {"x": -23.2,"y": 16.1379,"z": 27.4302},"rotation": {"pitch": 0,"yaw": 0,"roll": 0}},
+		"mirror_center": {"position": {"x": -11.7377,"y": 0.260551,"z": 40.0683},"rotation": {"pitch": 4.2,"yaw": 10.192,"roll": 14.845}},
+		"mirror_left": {"position": {"x": -22.7584,"y": -33.4222,"z": 31.0988},"rotation": {"pitch": 0,"yaw": -1.1,"roll": -10}},
+		"mirror_right": {"position": {"x": -22.7584,"y": 33.4222,"z": 31.0988},"rotation": {"pitch": 0,"yaw": 1.1,"roll": -10}}
 	},
 	"viewports": {
-		"mirror_center": {"position": {"x": -10,"y": 0,"z": 30},"rotation": {"pitch": 0,"yaw": 0,"roll": 0}},
-		"mirror_left": {"position": {"x": -40,"y": 0,"z": 25},"rotation": {"pitch": 0,"yaw": 0,"roll": 0}},
-		"mirror_right": {"position": {"x": -40,"y": 0,"z": 25},"rotation": {"pitch": 0,"yaw": 0,"roll": 0}}
+		"mirror_center": {"bone": "mirror_center"},
+		"mirror_left": {"bone": "mirror_left"},
+		"mirror_right": {"bone": "mirror_right"}
 	},
 	"map_models": {
 		"body": {
@@ -83,13 +86,13 @@
 			"script": "https://raw.githubusercontent.com/NekerSqu4w/obj_file/main/nissan cefiro/steering_wheel.script"
 		},
 		"RPMneedle": {
-			"load": ["needle.obj"],
+			"load": ["rpm_needle.obj"],
 			"texture": "interior",
 			"bone": "rpm_needle",
 			"script": "https://raw.githubusercontent.com/NekerSqu4w/obj_file/main/nissan cefiro/needle.script"
 		},
 		"KMHneedle": {
-			"load": ["needle.obj"],
+			"load": ["kmh_needle.obj"],
 			"texture": "interior",
 			"bone": "kmh_needle",
 			"script": "https://raw.githubusercontent.com/NekerSqu4w/obj_file/main/nissan cefiro/needle.script"
