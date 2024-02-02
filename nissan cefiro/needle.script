@@ -7,10 +7,10 @@ return function(name,obj,bone,variable)
     //variable return local variable setup inside of updateVariable()
 
     if name == "RPMneedle" then
-        obj:setAngles(bone:localToWorldAngles(Angle(-variable.rpmAngle,0,0)))
+        obj:setAngles(bone:localToWorldAngles(Angle(0,-variable.rpmAngle,0)))
     end
 
     if name == "KMHneedle" then
-        obj:setAngles(bone:localToWorldAngles(Angle(-variable.kmhAngle,0,0)))
+        obj:setAngles(bone:localToWorldAngles(Angle(0,-variable.kmhAngle,0)))
     end
 end
