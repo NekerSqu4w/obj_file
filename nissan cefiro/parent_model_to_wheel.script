@@ -1,0 +1,13 @@
+// based on lua scripting languages
+
+local init = function(name,obj,bone,variable,genid)
+    local wheels_parent = entity(variable.wheels[genid])
+    
+    obj:setParent(wheels_parent)
+    obj:setPos(wheels_parent:localToWorld(Vector(0,0,0)))
+    obj:setAngles(wheels_parent:localToWorldAngle(Angle(0,0,0)))
+end
+
+return {
+    init = init
+}

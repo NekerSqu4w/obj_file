@@ -40,6 +40,15 @@
             "normal": "tyre_n.png",
             "flags": 256
         },
+        "rim": {
+            "diffuse": "$default:phoenix_storms/mat/mat_phx_metallic2"
+        },
+        "brake_disk": {
+            "type": "VertexLitGeneric",
+            "diffuse": "exterior_disc_diff.png",
+            "normal": "exterior_disc_NM.png",
+            "flags": 256
+        },
         "mirror_center": {"diffuse": "$viewports:mirror_center"},
         "mirror_left": {"diffuse": "$viewports:mirror_left"},
         "mirror_right": {"diffuse": "$viewports:mirror_right"}

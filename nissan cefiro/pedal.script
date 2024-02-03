@@ -1,6 +1,9 @@
 // based on lua scripting languages
 
-return function(name,obj,bone,variable)
+local init = function(name,obj,bone,variable,genid)
+end
+
+local update = function(name,obj,bone,variable,genid)
     if name == "ThrottlePedal" then
         obj:setAngles(bone:localToWorldAngles(Angle(0,0,variable.throttle * 15)))
     end
@@ -13,3 +16,8 @@ return function(name,obj,bone,variable)
         obj:setAngles(bone:localToWorldAngles(Angle(0,0,variable.clutch * 15)))
     end
 end
+
+return {
+    init = init,
+    update = update
+}
