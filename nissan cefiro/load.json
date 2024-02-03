@@ -8,7 +8,10 @@
 		"rpm_needle": {"position": {"x": -23.2,"y": 16.1379,"z": 27.4302},"rotation": {"x": 0,"y": -15,"z": 0}},
 		"mirror_center": {"position": {"x": -11.7377,"y": 0.260551,"z": 40.0683},"rotation": {"x": 0,"y": 7,"z": 15}},
 		"mirror_left": {"position": {"x": -22.7584,"y": 33.4222,"z": 31.0988},"rotation": {"x": 0,"y": 0,"z": 10}},
-		"mirror_right": {"position": {"x": -22.7584,"y": -33.4222,"z": 31.0988},"rotation": {"x": 0,"y": 0,"z": -10}}
+		"mirror_right": {"position": {"x": -22.7584,"y": -33.4222,"z": 31.0988},"rotation": {"x": 0,"y": 0,"z": -10}},
+		"throttle_pedal": {"position": {"x": -34.6823,"y": 23.2663,"z": 16.522},"rotation": {"x": 0,"y": -25,"z": 0}},
+		"brake_pedal": {"position": {"x": -33.711,"y": 16.799,"z": 16.9167},"rotation": {"x": 0,"y": -30,"z": 0}},
+		"clutch_pedal": {"position": {"x": -33.3382,"y": 7.01989,"z": 16.281},"rotation": {"x": 0,"y": -30,"z": 0}}
 	},
 	"viewports": {
 		"mirror_center": {"bone": "mirror_center"},
@@ -80,22 +83,40 @@
 			"bone": "base"
 		},
 		"steering_wheel": {
-			"load": ["steering_wheel.obj"],
+			"load": ["interior/steering_wheel.obj"],
 			"texture": "interior",
 			"bone": "steering_wheel",
 			"script": "https://raw.githubusercontent.com/NekerSqu4w/obj_file/main/nissan cefiro/steering_wheel.script"
 		},
 		"RPMneedle": {
-			"load": ["rpm_needle.obj"],
+			"load": ["interior/rpm_needle.obj"],
 			"texture": "interior",
 			"bone": "rpm_needle",
 			"script": "https://raw.githubusercontent.com/NekerSqu4w/obj_file/main/nissan cefiro/needle.script"
 		},
 		"KMHneedle": {
-			"load": ["kmh_needle.obj"],
+			"load": ["interior/kmh_needle.obj"],
 			"texture": "interior",
 			"bone": "kmh_needle",
 			"script": "https://raw.githubusercontent.com/NekerSqu4w/obj_file/main/nissan cefiro/needle.script"
+		},
+		"ThrottlePedal": {
+			"load": ["interior/throttle_pedal.obj"],
+			"texture": "interior",
+			"bone": "throttle_pedal",
+			"script": "https://raw.githubusercontent.com/NekerSqu4w/obj_file/main/nissan cefiro/pedal.script"
+		},
+		"BrakePedal": {
+			"load": ["interior/brake_pedal.obj"],
+			"texture": "interior",
+			"bone": "brake_pedal",
+			"script": "https://raw.githubusercontent.com/NekerSqu4w/obj_file/main/nissan cefiro/pedal.script"
+		},
+		"ClutchPedal": {
+			"load": ["interior/clutch_pedal.obj"],
+			"texture": "interior",
+			"bone": "clutch_pedal",
+			"script": "https://raw.githubusercontent.com/NekerSqu4w/obj_file/main/nissan cefiro/pedal.script"
 		}
 	}
 }

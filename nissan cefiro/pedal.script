@@ -1,0 +1,15 @@
+// based on lua scripting languages
+
+return function(name,obj,bone,variable)
+    if name == "ThrottlePedal" then
+        obj:setAngles(bone:localToWorldAngles(Angle(variable.throttle * 25,0,0)))
+    end
+
+    if name == "BrakePedal" then
+        obj:setAngles(bone:localToWorldAngles(Angle(variable.brake * 25,0,0)))
+    end
+
+    if name == "ClutchPedal" then
+        obj:setAngles(bone:localToWorldAngles(Angle(variable.clutch * 25,0,0)))
+    end
+end

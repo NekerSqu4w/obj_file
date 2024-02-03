@@ -1,0 +1,8 @@
+// based on lua scripting languages
+
+return function(name,obj,bone,variable)
+    //name return current model name
+    //obj return the current obj entity
+    //bone return the bones entity
+    //variable return local variable setup inside of updateVariable()
+end
