@@ -1,6 +1,6 @@
 // based on lua scripting languages
 
-local init = function(name,obj,bone,variable,genid)
+local update = function(name,obj,bone,variable,genid)
     local wheels_parent = entity(variable.wheels[genid])
     
     obj:setParent(wheels_parent)
@@ -9,5 +9,5 @@ local init = function(name,obj,bone,variable,genid)
 end
 
 return {
-    init = init
+    update = update
 }
