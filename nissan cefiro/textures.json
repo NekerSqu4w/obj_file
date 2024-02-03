@@ -49,6 +49,11 @@
             "normal": "exterior_disc_NM.png",
             "flags": 256
         },
+        "w_racing_brand": {
+            "type": "VertexLitGeneric",
+            "diffuse": "RAYS_2.png",
+            "flags": 256
+        },
         "mirror_center": {"diffuse": "$viewports:mirror_center"},
         "mirror_left": {"diffuse": "$viewports:mirror_left"},
         "mirror_right": {"diffuse": "$viewports:mirror_right"}

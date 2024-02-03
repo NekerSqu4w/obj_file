@@ -150,6 +150,13 @@
 			"texture": "blackpaint",
 			"bone": "base",
 			"script": "https://raw.githubusercontent.com/NekerSqu4w/obj_file/main/nissan cefiro/parent_model_to_wheel.script"
+		},
+		"WheelRaceBrand": {
+			"count": 4,
+			"load": ["wheel/racing_brand.obj"],
+			"texture": "w_racing_brand",
+			"bone": "base",
+			"script": "https://raw.githubusercontent.com/NekerSqu4w/obj_file/main/nissan cefiro/parent_model_to_wheel.script"
 		}
 	}
 }
