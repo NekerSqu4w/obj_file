@@ -132,6 +132,7 @@
 		"WheelRim": {
 			"count": 4,
 			"load": ["wheel/rim.obj"],
+			"color": {"r": "$wheelColor.r$","g": "$wheelColor.g$","b": "$wheelColor.b$","a": 255},
 			"modifiers": [{"type": "remap.uv","settings": {"scale": 0.2}}],
 			"texture": "carpaint",
 			"bone": "base",
