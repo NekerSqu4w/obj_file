@@ -2,14 +2,14 @@
 
 return function(name,obj,bone,variable)
     if name == "ThrottlePedal" then
-        obj:setAngles(bone:localToWorldAngles(Angle(0,0,variable.throttle * 25)))
+        obj:setAngles(bone:localToWorldAngles(Angle(0,0,variable.throttle * 20)))
     end
 
     if name == "BrakePedal" then
-        obj:setAngles(bone:localToWorldAngles(Angle(0,0,variable.brake * 25)))
+        obj:setAngles(bone:localToWorldAngles(Angle(0,0,variable.brake * 20)))
     end
 
     if name == "ClutchPedal" then
-        obj:setAngles(bone:localToWorldAngles(Angle(0,0,variable.clutch * 25)))
+        obj:setAngles(bone:localToWorldAngles(Angle(0,0,variable.clutch * 20)))
     end
 end
