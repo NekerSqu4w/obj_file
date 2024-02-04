@@ -13,10 +13,7 @@
         "interior": {
             "type": "VertexLitGeneric",
             "diffuse": "interior_d.png",
-            "normal": "interior_n.png",
             "textureParam": {
-                "$phongexponent": "float(1800)",
-                "$envmapsaturation": "float(0.01)",
                 "$flags": "int(256)"
             }
         },
