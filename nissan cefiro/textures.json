@@ -15,7 +15,7 @@
             "diffuse": "interior_d.png",
             "normal": "interior_n.png",
             "textureParam": {
-                "$phongexponent": "float(800)",
+                "$phongexponent": "float(1200)",
                 "$flags": "int(256)"
             }
         },
@@ -51,7 +51,7 @@
             "diffuse": "tyre_d.png",
             "normal": "tyre_n.png",
             "textureParam": {
-                "$phongexponent": "float(800)",
+                "$phongexponent": "float(600)",
                 "$flags": "int(256)"
             }
         },
