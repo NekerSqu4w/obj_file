@@ -15,7 +15,7 @@
             "diffuse": "interior_d.png",
             "normal": "interior_n.png",
             "textureParam": {
-                "$phongexponent": "float(50)",
+                "$phongexponent": "float(200)",
                 "$envmaptint": "vec(0.1,0.1,0.1)",
                 "$flags": "int(256)"
             }
@@ -35,8 +35,8 @@
             "diffuse": "lights_rear_d.png",
             "normal": "lights_rear_n.png",
             "textureParam": {
-                "$phongexponent": "float(50)",
                 "$envmaptint": "vec(0.1,0.1,0.1)",
+                "$phongexponent": "float(200)",
                 "$flags": "int(256)"
             }
         },
@@ -53,8 +53,8 @@
             "diffuse": "tyre_d.png",
             "normal": "tyre_n.png",
             "textureParam": {
-                "$phongexponent": "float(50)",
                 "$envmaptint": "vec(0.1,0.1,0.1)",
+                "$phongexponent": "float(200)",
                 "$flags": "int(256)"
             }
         },
@@ -66,8 +66,8 @@
             "diffuse": "exterior_disc_diff.png",
             "normal": "exterior_disc_NM.png",
             "textureParam": {
-                "$phongexponent": "float(50)",
                 "$envmaptint": "vec(0.1,0.1,0.1)",
+                "$phongexponent": "float(200)",
                 "$flags": "int(256)"
             }
         },
