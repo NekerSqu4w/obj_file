@@ -16,7 +16,7 @@
             "normal": "interior_n.png",
             "textureParam": {
                 "$phongexponent": "float(1800)",
-                "$envmapsaturation": "float(0.1)",
+                "$envmapsaturation": "float(0.01)",
                 "$flags": "int(256)"
             }
         },
@@ -36,7 +36,7 @@
             "normal": "lights_rear_n.png",
             "textureParam": {
                 "$phongexponent": "float(800)",
-                "$envmapsaturation": "float(0.1)",
+                "$envmapsaturation": "float(0.01)",
                 "$flags": "int(256)"
             }
         },
@@ -54,7 +54,7 @@
             "normal": "tyre_n.png",
             "textureParam": {
                 "$phongexponent": "float(600)",
-                "$envmapsaturation": "float(0.1)",
+                "$envmapsaturation": "float(0.01)",
                 "$flags": "int(256)"
             }
         },
@@ -67,7 +67,7 @@
             "normal": "exterior_disc_NM.png",
             "textureParam": {
                 "$phongexponent": "float(400)",
-                "$envmapsaturation": "float(0.1)",
+                "$envmapsaturation": "float(0.01)",
                 "$flags": "int(256)"
             }
         },
