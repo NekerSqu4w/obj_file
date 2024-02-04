@@ -14,7 +14,10 @@
             "type": "VertexLitGeneric",
             "diffuse": "interior_d.png",
             "normal": "interior_n.png",
-            "flags": 256
+            "textureParam": {
+                "$phongexponent": 200,
+                "$flags": 256
+            }
         },
         "window": {
             "diffuse": "$default:phoenix_storms/grey_chrome"
@@ -22,25 +25,36 @@
         "front_light": {
             "type": "VertexLitGeneric",
             "diffuse": "lights_front.png",
-            "flags": 256
+            "textureParam": {
+                "$phongexponent": 200,
+                "$flags": 256
+            }
         },
         "back_light": {
             "type": "VertexLitGeneric",
             "diffuse": "lights_rear_d.png",
             "normal": "lights_rear_n.png",
-            "flags": 256
+            "textureParam": {
+                "$phongexponent": 200,
+                "$flags": 256
+            }
         },
         "licence_plate": {
             "type": "VertexLitGeneric",
             "diffuse": "licence_plate_d.png",
             "normal": "licence_plate_n.png",
-            "flags": 256
+            "textureParam": {
+                "$flags": 256
+            }
         },
         "tyre": {
             "type": "VertexLitGeneric",
             "diffuse": "tyre_d.png",
             "normal": "tyre_n.png",
-            "flags": 256
+            "textureParam": {
+                "$phongexponent": 200,
+                "$flags": 256
+            }
         },
         "rim": {
             "diffuse": "$default:phoenix_storms/mat/mat_phx_metallic2"
@@ -49,12 +63,17 @@
             "type": "VertexLitGeneric",
             "diffuse": "exterior_disc_diff.png",
             "normal": "exterior_disc_NM.png",
-            "flags": 256
+            "textureParam": {
+                "$phongexponent": 200,
+                "$flags": 256
+            }
         },
         "w_racing_brand": {
             "type": "VertexLitGeneric",
             "diffuse": "RAYS_2.png",
-            "flags": 256
+            "textureParam": {
+                "$flags": 256
+            }
         },
         "mirror_center": {"diffuse": "$viewports:mirror_center"},
         "mirror_left": {"diffuse": "$viewports:mirror_left"},
