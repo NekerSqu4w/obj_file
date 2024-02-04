@@ -55,9 +55,6 @@
                 "$flags": "int(256)"
             }
         },
-        "rim": {
-            "diffuse": "$default:phoenix_storms/mat/mat_phx_metallic2"
-        },
         "brake_disk": {
             "type": "VertexLitGeneric",
             "diffuse": "exterior_disc_diff.png",
@@ -68,7 +65,7 @@
                 "$flags": "int(256)"
             }
         },
-        "w_racing_brand": {
+        "volk_racing_brand": {
             "type": "VertexLitGeneric",
             "diffuse": "RAYS_2.png",
             "textureParam": {

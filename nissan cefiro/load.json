@@ -155,7 +155,16 @@
 		"WheelRaceBrand": {
 			"count": 4,
 			"load": ["wheel/racing_brand.obj"],
-			"texture": "w_racing_brand",
+			"texture": "volk_racing_brand",
+			"bone": "base",
+			"script": "https://raw.githubusercontent.com/NekerSqu4w/obj_file/main/nissan cefiro/parent_model_to_wheel.script"
+		},
+		"WheelChrome": {
+			"count": 4,
+			"load": ["wheel/chrome_part.obj","wheel/nuts.obj"],
+			"color": {"r": 100,"g": 100,"b": 100,"a": 255},
+			"modifiers": [{"type": "remap.uv","settings": {"scale": 0.2}}],
+			"texture": "carpaint",
 			"bone": "base",
 			"script": "https://raw.githubusercontent.com/NekerSqu4w/obj_file/main/nissan cefiro/parent_model_to_wheel.script"
 		}
