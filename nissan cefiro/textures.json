@@ -12,7 +12,8 @@
         },
         "interior": {
             "type": "VertexLitGeneric",
-            "diffuse": "interior.png",
+            "diffuse": "interior_d.png",
+            "normal": "interior_n.png",
             "flags": 256
         },
         "window": {
@@ -25,7 +26,8 @@
         },
         "back_light": {
             "type": "VertexLitGeneric",
-            "diffuse": "lights_rear.png",
+            "diffuse": "lights_rear_d.png",
+            "normal": "lights_rear_n.png",
             "flags": 256
         },
         "licence_plate": {
