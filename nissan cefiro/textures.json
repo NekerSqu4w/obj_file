@@ -15,8 +15,9 @@
             "diffuse": "interior_d.png",
             "normal": "interior_n.png",
             "textureParam": {
-                "$phongexponent": 200,
-                "$flags": 256
+                "$phongexponent": "int(200)",
+                "$envmaptint": "vec(0.1,0.1,0.1)",
+                "$flags": "int(256)"
             }
         },
         "window": {
@@ -26,8 +27,7 @@
             "type": "VertexLitGeneric",
             "diffuse": "lights_front.png",
             "textureParam": {
-                "$phongexponent": 200,
-                "$flags": 256
+                "$flags": "int(256)"
             }
         },
         "back_light": {
@@ -35,8 +35,9 @@
             "diffuse": "lights_rear_d.png",
             "normal": "lights_rear_n.png",
             "textureParam": {
-                "$phongexponent": 200,
-                "$flags": 256
+                "$envmaptint": "vec(0.1,0.1,0.1)",
+                "$phongexponent": "int(200)",
+                "$flags": "int(256)"
             }
         },
         "licence_plate": {
@@ -44,7 +45,7 @@
             "diffuse": "licence_plate_d.png",
             "normal": "licence_plate_n.png",
             "textureParam": {
-                "$flags": 256
+                "$flags": "int(256)"
             }
         },
         "tyre": {
@@ -52,8 +53,9 @@
             "diffuse": "tyre_d.png",
             "normal": "tyre_n.png",
             "textureParam": {
-                "$phongexponent": 200,
-                "$flags": 256
+                "$envmaptint": "vec(0.1,0.1,0.1)",
+                "$phongexponent": "int(200)",
+                "$flags": "int(256)"
             }
         },
         "rim": {
@@ -64,15 +66,16 @@
             "diffuse": "exterior_disc_diff.png",
             "normal": "exterior_disc_NM.png",
             "textureParam": {
-                "$phongexponent": 200,
-                "$flags": 256
+                "$envmaptint": "vec(0.1,0.1,0.1)",
+                "$phongexponent": "int(200)",
+                "$flags": "int(256)"
             }
         },
         "w_racing_brand": {
             "type": "VertexLitGeneric",
             "diffuse": "RAYS_2.png",
             "textureParam": {
-                "$flags": 256
+                "$flags": "int(256)"
             }
         },
         "mirror_center": {"diffuse": "$viewports:mirror_center"},
