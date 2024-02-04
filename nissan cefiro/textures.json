@@ -15,7 +15,7 @@
             "diffuse": "interior_d.png",
             "normal": "interior_n.png",
             "textureParam": {
-                "$phongexponent": "float(1200)",
+                "$phongexponent": "float(1800)",
                 "$envmapsaturation": "float(0.1)",
                 "$flags": "int(256)"
             }
