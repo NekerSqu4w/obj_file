@@ -12,9 +12,6 @@ local init = function(name,obj,bone,variable,genid)
             obj:setParent(wheels_parent)
             obj:setPos(wheels_parent:localToWorld(Vector(0,0,0)))
             obj:setAngles(wheels_parent:localToWorldAngles(Angle(0,180,0)))
-        else
-            // try reload if invalid
-            doReload()
         end
     else
         // try reload if no wheels
