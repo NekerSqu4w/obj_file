@@ -4,7 +4,7 @@ local init = function(name,obj,bone,variable,genid)
     if variable.wheels and variable.wheels[genid] then
         local wheels_parent = entity(variable.wheels[genid])
         
-        if wheels_parent:isValid() and wheels_parent:isValidPhys() then
+        if wheels_parent:isValid() then
             obj:setParent(wheels_parent)
             obj:setPos(wheels_parent:localToWorld(Vector(0,0,0)))
             obj:setAngles(wheels_parent:localToWorldAngles(Angle(0,180,0)))
