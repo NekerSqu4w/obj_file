@@ -17,7 +17,7 @@
     "cached_mdl": ["body.obj","interior.obj","mirror.obj","misc.obj","wheel.obj","other.obj"],
     "map_models": {
         "body": {
-			"load": ["body:fender"],
+			"load": ["body:body_stiches","body:door","body:front_bumper","body:hood","body:mirror_part","body:rear_bumper","body:skirt","body:spoiler","body:trunk"],
 			"texture": "carpaint",
 			"bone": "base",
 			"color": {"r": "$bodyColor.r$","g": "$bodyColor.g$","b": "$bodyColor.b$","a": 255}
