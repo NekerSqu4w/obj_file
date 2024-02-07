@@ -1,0 +1,172 @@
+{
+	"textures": "https://raw.githubusercontent.com/NekerSqu4w/obj_file/main/nissan cefiro/textures.json",
+	"models": "https://raw.githubusercontent.com/NekerSqu4w/obj_file/main/nissan cefiro/models/",
+	"bones": {
+		"base": {"position": {"x": 0,"y": 0,"z": 0},"rotation": {"x": 0,"y": 0,"z": 0}},
+		"steering_wheel": {"position": {"x": -16.0374,"y": 14.3,"z": 24.21},"rotation": {"x": 0,"y": -25,"z": 0}},
+		
+		"kmh_needle": {"position": {"x": -23.2,"y": 11.9689,"z": 27.4302},"rotation": {"x": 0,"y": -15,"z": 0}},
+		"rpm_needle": {"position": {"x": -23.2,"y": 16.1379,"z": 27.4302},"rotation": {"x": 0,"y": -15,"z": 0}},
+		
+		"mirror_center": {"position": {"x": -11.7377,"y": 0.260551,"z": 40.0683},"rotation": {"x": 0,"y": 7,"z": 15}},
+		"mirror_left": {"position": {"x": -22.7584,"y": -33.4222,"z": 31.0988},"rotation": {"x": 0,"y": 0,"z": 10}},
+		"mirror_right": {"position": {"x": -22.7584,"y": 33.4222,"z": 31.0988},"rotation": {"x": 0,"y": 0,"z": -10}},
+		
+		"throttle_pedal": {"position": {"x": -33.5889,"y": 23.2663,"z": 16.729},"rotation": {"x": 0,"y": -25,"z": 0}},
+		"brake_pedal": {"position": {"x": -33.711,"y": 16.799,"z": 16.9167},"rotation": {"x": 0,"y": -30,"z": 0}},
+		"clutch_pedal": {"position": {"x": -33.3382,"y": 7.01989,"z": 16.281},"rotation": {"x": 0,"y": -30,"z": 0}}
+	},
+	"viewports": {
+		"mirror_center": {"bone": "mirror_center"},
+		"mirror_left": {"bone": "mirror_left"},
+		"mirror_right": {"bone": "mirror_right"}
+	},
+	"map_models": {
+		"body": {
+			"load": ["body/door.obj","body/fender.obj","body/front bumper.obj","body/rear bumper.obj","body/hood.obj","body/skirt.obj","body/trunk.obj","body/mirror_part.obj","body/spoiler.obj","body/body_stitches.obj"],
+			"texture": "carpaint",
+			"modifiers": [{"type": "remap.uv","settings": {"scale": 0.2}}],
+			"bone": "base",
+			"color": {"r": "$bodyColor.r$","g": "$bodyColor.g$","b": "$bodyColor.b$","a": 255}
+		},
+		"misc": {
+			"load": ["misc/car_floor.obj","misc/engine_bay.obj","misc/door_stitches.obj","misc/other.obj","misc/light_support.obj"],
+			"texture": "blackpaint",
+			"modifiers": [{"type": "remap.uv","settings": {"scale": 0.2}}],
+			"bone": "base",
+			"color": {"r": 0,"g": 0,"b": 0,"a": 255}
+		},
+		"exhaust": {
+			"load": ["misc/exhaust.obj"],
+			"texture": "exhaust",
+			"modifiers": [{"type": "remap.uv","settings": {"scale": 0.1}}],
+			"bone": "base",
+			"color": {"r": 150,"g": 150,"b": 150,"a": 255}
+		},
+		"interior": {
+			"load": ["interior/brake.obj","interior/interior.obj","interior/seat.obj","interior/dashboard_needle_back_part.obj"],
+			"texture": "interior",
+			"bone": "base"
+		},
+		"mirror_center": {
+			"load": ["mirror/mirror_center.obj"],
+			"texture": "mirror_center",
+			"bone": "base"
+		},
+		"mirror_left": {
+			"load": ["mirror/mirror_left.obj"],
+			"texture": "mirror_left",
+			"bone": "base"
+		},
+		"mirror_right": {
+			"load": ["mirror/mirror_right.obj"],
+			"texture": "mirror_right",
+			"bone": "base"
+		},
+		"windows": {
+			"load": ["window.obj","light_glass.obj"],
+			"texture": "window",
+			"modifiers": [{"type": "remap.face","settings": {"inside": 1}}],
+			"bone": "base",
+			"color": {"r": 0,"g": 0,"b": 0,"a": 150}
+		},
+		"licence_plate": {
+			"load": ["licence_plate.obj"],
+			"texture": "licence_plate",
+			"bone": "base"
+		},
+		"back_light": {
+			"load": ["back_light.obj"],
+			"texture": "back_light",
+			"bone": "base"
+		},
+		"front_light": {
+			"load": ["front_light.obj"],
+			"texture": "front_light",
+			"bone": "base"
+		},
+		"steering_wheel": {
+			"load": ["interior/steering_wheel.obj"],
+			"texture": "interior",
+			"bone": "steering_wheel",
+			"script": "https://raw.githubusercontent.com/NekerSqu4w/obj_file/main/nissan cefiro/steering_wheel.script"
+		},
+		"RPMneedle": {
+			"load": ["interior/rpm_needle.obj"],
+			"texture": "interior",
+			"bone": "rpm_needle",
+			"script": "https://raw.githubusercontent.com/NekerSqu4w/obj_file/main/nissan cefiro/needle.script"
+		},
+		"KMHneedle": {
+			"load": ["interior/kmh_needle.obj"],
+			"texture": "interior",
+			"bone": "kmh_needle",
+			"script": "https://raw.githubusercontent.com/NekerSqu4w/obj_file/main/nissan cefiro/needle.script"
+		},
+		"ThrottlePedal": {
+			"load": ["interior/throttle_pedal.obj"],
+			"texture": "interior",
+			"bone": "throttle_pedal",
+			"script": "https://raw.githubusercontent.com/NekerSqu4w/obj_file/main/nissan cefiro/pedal.script"
+		},
+		"BrakePedal": {
+			"load": ["interior/brake_pedal.obj"],
+			"texture": "interior",
+			"bone": "brake_pedal",
+			"script": "https://raw.githubusercontent.com/NekerSqu4w/obj_file/main/nissan cefiro/pedal.script"
+		},
+		"ClutchPedal": {
+			"load": ["interior/clutch_pedal.obj"],
+			"texture": "interior",
+			"bone": "clutch_pedal",
+			"script": "https://raw.githubusercontent.com/NekerSqu4w/obj_file/main/nissan cefiro/pedal.script"
+		},
+
+		"WheelTyre": {
+			"count": 4,
+			"load": ["wheel/tyre.obj"],
+			"texture": "tyre",
+			"bone": "base",
+			"script": "https://raw.githubusercontent.com/NekerSqu4w/obj_file/main/nissan cefiro/parent_model_to_wheel.script"
+		},
+		"WheelRim": {
+			"count": 4,
+			"load": ["wheel/rim.obj"],
+			"color": {"r": "$wheelColor.r$","g": "$wheelColor.g$","b": "$wheelColor.b$","a": 255},
+			"modifiers": [{"type": "remap.uv","settings": {"scale": 0.2}}],
+			"texture": "carpaint",
+			"bone": "base",
+			"script": "https://raw.githubusercontent.com/NekerSqu4w/obj_file/main/nissan cefiro/parent_model_to_wheel.script"
+		},
+		"WheelBrakeDisk": {
+			"count": 4,
+			"load": ["wheel/brake_disk.obj"],
+			"texture": "brake_disk",
+			"bone": "base",
+			"script": "https://raw.githubusercontent.com/NekerSqu4w/obj_file/main/nissan cefiro/parent_model_to_wheel.script"
+		},
+		"WheelFakeShadow": {
+			"count": 4,
+			"load": ["wheel/fake_shadow.obj"],
+			"texture": "blackpaint",
+			"bone": "base",
+			"script": "https://raw.githubusercontent.com/NekerSqu4w/obj_file/main/nissan cefiro/parent_model_to_wheel.script"
+		},
+		"WheelRaceBrand": {
+			"count": 4,
+			"load": ["wheel/racing_brand.obj"],
+			"texture": "volk_racing_brand",
+			"bone": "base",
+			"script": "https://raw.githubusercontent.com/NekerSqu4w/obj_file/main/nissan cefiro/parent_model_to_wheel.script"
+		},
+		"WheelChrome": {
+			"count": 4,
+			"load": ["wheel/chrome_part.obj","wheel/nuts.obj"],
+			"color": {"r": 50,"g": 50,"b": 50,"a": 255},
+			"modifiers": [{"type": "remap.uv","settings": {"scale": 0.2}}],
+			"texture": "carpaint",
+			"bone": "base",
+			"script": "https://raw.githubusercontent.com/NekerSqu4w/obj_file/main/nissan cefiro/parent_model_to_wheel.script"
+		}
+	}
+}

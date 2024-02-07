@@ -1,0 +1,19 @@
+// based on lua scripting languages
+
+local update = function(name,obj,bone,variable,genid)
+    if name == "ThrottlePedal" then
+        obj:setAngles(bone:localToWorldAngles(Angle(0,0,variable.throttle * 15)))
+    end
+
+    if name == "BrakePedal" then
+        obj:setAngles(bone:localToWorldAngles(Angle(0,0,variable.brake * 15)))
+    end
+
+    if name == "ClutchPedal" then
+        obj:setAngles(bone:localToWorldAngles(Angle(0,0,variable.clutch * 15)))
+    end
+end
+
+return {
+    update = update
+}
