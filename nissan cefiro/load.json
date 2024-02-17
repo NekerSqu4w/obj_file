@@ -16,7 +16,7 @@
 	},
     "cached_mdl": {
 		"body": {"path": "body.obj","modifiers": [{"type": "remap.uv","settings": {"scale": 0.1}}]},
-		"interior:": {"path": "interior.obj","modifiers": [{"type": "remap.face","settings": {"invert": 1}}]},
+		"interior:": {"path": "interior.obj"},
 		"mirror": {"path": "mirror.obj"},
 		"misc": {"path": "misc.obj","modifiers": [{"type": "remap.uv","settings": {"scale": 0.1}}]},
 		"wheel": {"path": "wheel.obj"},
