@@ -1,5 +1,5 @@
 {
-	"folder": "https://raw.githubusercontent.com/NekerSqu4w/obj_file/main/nissan cefiro/textures",
+	"folder": "textures/",
 	"textures": {
 		"carpaint": {
 			"diffuse": "$default:phoenix_storms/mat/mat_phx_metallic2"
