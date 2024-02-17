@@ -20,7 +20,7 @@
 			"load": ["body:body_stitches","body:door","body:front_bumper","body:hood","body:mirror_part","body:rear_bumper","body:skirt","body:spoiler","body:trunk"],
 			"texture": "carpaint",
 			"bone": "base",
-			"color": {"r": "$bodyColor.r$","g": "$bodyColor.g$","b": "$bodyColor.b$","a": 255}
+			"color": {"r": 150,"g": 150,"b": 150,"a": 255}
 		},
 		"misc": {
 			"load": ["misc/car_floor.obj","misc/engine_bay.obj","misc/door_stitches.obj","misc/other.obj","misc/light_support.obj"],
