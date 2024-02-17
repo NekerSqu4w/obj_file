@@ -15,7 +15,7 @@
 		"clutch_pedal": {"position": {"x": -33.3382,"y": 7.01989,"z": 16.281},"rotation": {"x": 0,"y": -30,"z": 0}}
 	},
     "cached_mdl": {
-		"body": {"path": "body.obj","modifiers": [{"type": "remap.uv","settings": {"scale": 0.1}}]},
+		"body": {"path": "body.obj","modifiers": [{"type": "remap.uv","settings": {"scale": 0.1}},{"type": "remap.face","settings": {"inside": 1}}]},
 		"interior:": {"path": "interior.obj"},
 		"mirror": {"path": "mirror.obj"},
 		"misc": {"path": "misc.obj","modifiers": [{"type": "remap.uv","settings": {"scale": 0.1}}]},
