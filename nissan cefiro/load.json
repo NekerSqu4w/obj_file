@@ -20,7 +20,7 @@
 		"mirror": {"path": "mirror.obj"},
 		"misc": {"path": "misc.obj","modifiers": [{"type": "remap.uv","settings": {"scale": 0.1}}]},
 		"wheel": {"path": "wheel.obj"},
-		"other": {"path": "other.obj","modifiers": [{"type": "remap.face","settings": {"inside": 1}}]}
+		"other": {"path": "other.obj"}
 	},
     "map_models": {
         "body": {
