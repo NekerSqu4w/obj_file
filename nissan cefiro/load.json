@@ -14,7 +14,14 @@
 		"brake_pedal": {"position": {"x": -33.711,"y": 16.799,"z": 16.9167},"rotation": {"x": 0,"y": -30,"z": 0}},
 		"clutch_pedal": {"position": {"x": -33.3382,"y": 7.01989,"z": 16.281},"rotation": {"x": 0,"y": -30,"z": 0}}
 	},
-    "cached_mdl": ["body.obj","interior.obj","mirror.obj","misc.obj","wheel.obj","other.obj"],
+    "cached_mdl": {
+		"body": {"path": "body.obj"},
+		"interior:": {"path": "interior.obj"},
+		"mirror": {"path": "mirror.obj"},
+		"misc": {"path": "misc.obj","modifiers": [{"type": "remap.uv","settings": {"scale": 0.1}}]},
+		"wheel": {"path": "wheel.obj"},
+		"other": {"path": "other.obj","modifiers": [{"type": "remap.face","settings": {"inside": 1}}]}
+	},
     "map_models": {
         "body": {
 			"load": ["body:body_stitches","body:door","body:front_bumper","body:hood","body:mirror_part","body:rear_bumper","body:skirt","body:spoiler","body:trunk"],
@@ -23,58 +30,55 @@
 			"color": {"r": 150,"g": 150,"b": 150,"a": 255}
 		},
 		"misc": {
-			"load": ["misc/car_floor.obj","misc/engine_bay.obj","misc/door_stitches.obj","misc/other.obj","misc/light_support.obj"],
+			"load": ["misc:car_floor","misc:engine_bay","misc:door_stitches","misc:other","misc:light_support"],
 			"texture": "blackpaint",
-			"modifiers": [{"type": "remap.uv","settings": {"scale": 0.2}}],
 			"bone": "base",
 			"color": {"r": 0,"g": 0,"b": 0,"a": 255}
 		},
 		"exhaust": {
-			"load": ["misc/exhaust.obj"],
+			"load": ["misc:exhaust"],
 			"texture": "exhaust",
-			"modifiers": [{"type": "remap.uv","settings": {"scale": 0.1}}],
 			"bone": "base",
 			"color": {"r": 150,"g": 150,"b": 150,"a": 255}
 		},
 		"interior": {
-			"load": ["interior/brake.obj","interior/interior.obj","interior/seat.obj","interior/dashboard_needle_back_part.obj"],
+			"load": ["interior:brake","interior:interior","interior:seat","interior:dashboard_needle_back_part"],
 			"texture": "interior",
 			"bone": "base"
 		},
 		"mirror_center": {
-			"load": ["mirror/mirror_center.obj"],
+			"load": ["mirror:mirror_center"],
 			"texture": "mirror_center",
 			"bone": "base"
 		},
 		"mirror_left": {
-			"load": ["mirror/mirror_left.obj"],
+			"load": ["mirror:mirror_left"],
 			"texture": "mirror_left",
 			"bone": "base"
 		},
 		"mirror_right": {
-			"load": ["mirror/mirror_right.obj"],
+			"load": ["mirror:mirror_right"],
 			"texture": "mirror_right",
 			"bone": "base"
 		},
 		"windows": {
-			"load": ["window.obj","light_glass.obj"],
+			"load": ["other:window","other:light_glass"],
 			"texture": "window",
-			"modifiers": [{"type": "remap.face","settings": {"inside": 1}}],
 			"bone": "base",
 			"color": {"r": 0,"g": 0,"b": 0,"a": 150}
 		},
 		"licence_plate": {
-			"load": ["licence_plate.obj"],
+			"load": ["other:licence_plate"],
 			"texture": "licence_plate",
 			"bone": "base"
 		},
 		"back_light": {
-			"load": ["back_light.obj"],
+			"load": ["other:back_light"],
 			"texture": "back_light",
 			"bone": "base"
 		},
 		"front_light": {
-			"load": ["front_light.obj"],
+			"load": ["other:front_light"],
 			"texture": "front_light",
 			"bone": "base"
 		}
