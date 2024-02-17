@@ -2,6 +2,7 @@
 	"folder": "textures/",
 	"textures": {
 		"carpaint": {
+			"type": "VertexLitGeneric",
 			"diffuse": "$default:phoenix_storms/mat/mat_phx_metallic2"
 		},
 		"blackpaint": {
