@@ -17,10 +17,66 @@
     "cached_mdl": ["body.obj","interior.obj","mirror.obj","misc.obj","wheel.obj","other.obj"],
     "map_models": {
         "body": {
-			"load": ["body:body_stiches","body:door","body:front_bumper","body:hood","body:mirror_part","body:rear_bumper","body:skirt","body:spoiler","body:trunk"],
+			"load": ["body:body_stitches","body:door","body:front_bumper","body:hood","body:mirror_part","body:rear_bumper","body:skirt","body:spoiler","body:trunk"],
 			"texture": "carpaint",
 			"bone": "base",
 			"color": {"r": "$bodyColor.r$","g": "$bodyColor.g$","b": "$bodyColor.b$","a": 255}
+		},
+		"misc": {
+			"load": ["misc/car_floor.obj","misc/engine_bay.obj","misc/door_stitches.obj","misc/other.obj","misc/light_support.obj"],
+			"texture": "blackpaint",
+			"modifiers": [{"type": "remap.uv","settings": {"scale": 0.2}}],
+			"bone": "base",
+			"color": {"r": 0,"g": 0,"b": 0,"a": 255}
+		},
+		"exhaust": {
+			"load": ["misc/exhaust.obj"],
+			"texture": "exhaust",
+			"modifiers": [{"type": "remap.uv","settings": {"scale": 0.1}}],
+			"bone": "base",
+			"color": {"r": 150,"g": 150,"b": 150,"a": 255}
+		},
+		"interior": {
+			"load": ["interior/brake.obj","interior/interior.obj","interior/seat.obj","interior/dashboard_needle_back_part.obj"],
+			"texture": "interior",
+			"bone": "base"
+		},
+		"mirror_center": {
+			"load": ["mirror/mirror_center.obj"],
+			"texture": "mirror_center",
+			"bone": "base"
+		},
+		"mirror_left": {
+			"load": ["mirror/mirror_left.obj"],
+			"texture": "mirror_left",
+			"bone": "base"
+		},
+		"mirror_right": {
+			"load": ["mirror/mirror_right.obj"],
+			"texture": "mirror_right",
+			"bone": "base"
+		},
+		"windows": {
+			"load": ["window.obj","light_glass.obj"],
+			"texture": "window",
+			"modifiers": [{"type": "remap.face","settings": {"inside": 1}}],
+			"bone": "base",
+			"color": {"r": 0,"g": 0,"b": 0,"a": 150}
+		},
+		"licence_plate": {
+			"load": ["licence_plate.obj"],
+			"texture": "licence_plate",
+			"bone": "base"
+		},
+		"back_light": {
+			"load": ["back_light.obj"],
+			"texture": "back_light",
+			"bone": "base"
+		},
+		"front_light": {
+			"load": ["front_light.obj"],
+			"texture": "front_light",
+			"bone": "base"
 		}
     }
 }
