@@ -24,7 +24,7 @@
 	},
     "map_models": {
         "body": {
-			"load": ["body:body_stitches","body:door","body:front_bumper","body:hood","body:mirror_part","body:rear_bumper","body:skirt","body:spoiler","body:trunk"],
+			"load": ["body:body_stitches","body:fender","body:door","body:front_bumper","body:hood","body:mirror_part","body:rear_bumper","body:skirt","body:spoiler","body:trunk"],
 			"texture": "carpaint",
 			"bone": "base",
 			"color": {"r": 150,"g": 150,"b": 150,"a": 255}
