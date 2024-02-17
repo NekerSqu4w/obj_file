@@ -15,7 +15,7 @@
 			"diffuse": "$default:sprops/textures/sprops_metal4"
 		},
 		"interior": {
-			"diffuse": "interior.png",
+			"diffuse": "interior_d.png",
 			"textureParam": {
 				"$flags": "int(256)"
 			}
