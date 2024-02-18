@@ -62,6 +62,12 @@
 			"textureParam": {
 				"$flags": "int(256)"
 			}
+		},
+		"rim": {
+			"diffuse": "$default:sprops/textures/sprops_metal5"
+		},
+		"rim_chrome": {
+			"diffuse": "$default:sprops/textures/sprops_chrome"
 		}
 	}
 }
