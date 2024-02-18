@@ -1,18 +1,18 @@
 {
     "bones": {
 		"base": {"position": {"x": 0,"y": 0,"z": 0},"rotation": {"x": 0,"y": 0,"z": 0}},
+
 		"steering_wheel": {"position": {"x": -16.0374,"y": 14.3,"z": 24.21},"rotation": {"x": 0,"y": -25,"z": 0}},
-		
 		"kmh_needle": {"position": {"x": -23.2,"y": 11.9689,"z": 27.4302},"rotation": {"x": 0,"y": -15,"z": 0}},
 		"rpm_needle": {"position": {"x": -23.2,"y": 16.1379,"z": 27.4302},"rotation": {"x": 0,"y": -15,"z": 0}},
 		
-		"mirror_center": {"position": {"x": -11.7377,"y": 0.260551,"z": 40.0683},"rotation": {"x": 0,"y": 7,"z": 15}},
-		"mirror_left": {"position": {"x": -22.7584,"y": -33.4222,"z": 31.0988},"rotation": {"x": 0,"y": 0,"z": 10}},
-		"mirror_right": {"position": {"x": -22.7584,"y": 33.4222,"z": 31.0988},"rotation": {"x": 0,"y": 0,"z": -10}},
-		
 		"throttle_pedal": {"position": {"x": -33.5889,"y": 23.2663,"z": 16.729},"rotation": {"x": 0,"y": -25,"z": 0}},
 		"brake_pedal": {"position": {"x": -33.711,"y": 16.799,"z": 16.9167},"rotation": {"x": 0,"y": -30,"z": 0}},
-		"clutch_pedal": {"position": {"x": -33.3382,"y": 7.01989,"z": 16.281},"rotation": {"x": 0,"y": -30,"z": 0}}
+		"clutch_pedal": {"position": {"x": -33.3382,"y": 7.01989,"z": 16.281},"rotation": {"x": 0,"y": -30,"z": 0}},
+
+		"mirror_center": {"position": {"x": -11.7377,"y": 0.260551,"z": 40.0683},"rotation": {"x": 0,"y": 7,"z": 15}},
+		"mirror_left": {"position": {"x": -22.7584,"y": -33.4222,"z": 31.0988},"rotation": {"x": 0,"y": 0,"z": 10}},
+		"mirror_right": {"position": {"x": -22.7584,"y": 33.4222,"z": 31.0988},"rotation": {"x": 0,"y": 0,"z": -10}}
 	},
     "cached_mdl": {
 		"body": {"path": "body.obj","modifiers": [{"type": "remap.uv","settings": {"scale": 0.1}}]},
@@ -81,6 +81,43 @@
 			"load": ["other:front_light"],
 			"texture": "front_light",
 			"bone": "base"
+		},
+
+		"steering_wheel": {
+			"load": ["interior:steering_wheel"],
+			"texture": "interior",
+			"bone": "steering_wheel",
+			"script": "car_script.lua"
+		},
+		"RPMneedle": {
+			"load": ["interior:rpm_needle"],
+			"texture": "interior",
+			"bone": "rpm_needle",
+			"script": "car_script.lua"
+		},
+		"KMHneedle": {
+			"load": ["interior:kmh_needle"],
+			"texture": "interior",
+			"bone": "kmh_needle",
+			"script": "car_script.lua"
+		},
+		"ThrottlePedal": {
+			"load": ["interior:throttle_pedal"],
+			"texture": "interior",
+			"bone": "throttle_pedal",
+			"script": "car_script.lua"
+		},
+		"BrakePedal": {
+			"load": ["interior:brake_pedal"],
+			"texture": "interior",
+			"bone": "brake_pedal",
+			"script": "car_script.lua"
+		},
+		"ClutchPedal": {
+			"load": ["interior:clutch_pedal"],
+			"texture": "interior",
+			"bone": "clutch_pedal",
+			"script": "car_script.lua"
 		}
     }
 }
