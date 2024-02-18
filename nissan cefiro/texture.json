@@ -38,14 +38,6 @@
 				"$flags": "int(256)"
 			}
 		},
-		"back_light_active": {
-			"type": "VertexLitGeneric",
-			"diffuse": "lights_rear_d_active.png",
-			"normal": "lights_rear_n.png",
-			"textureParam": {
-				"$flags": "int(256)"
-			}
-		},
 		"licence_plate": {
 			"type": "VertexLitGeneric",
 			"diffuse": "licence_plate_d.png",
