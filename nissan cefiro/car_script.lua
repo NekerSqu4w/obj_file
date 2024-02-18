@@ -3,7 +3,6 @@ local script = {}
 script.init = function(name, obj, bone, variable, genid)
 
     /* DO WHEEL PARENT */
-    /*
     if obj.objInfo.parentType == "wheels" then
         if variable.wheels and variable.wheels[genid] then
             local wheels_parent = entity(variable.wheels[genid])
@@ -15,7 +14,6 @@ script.init = function(name, obj, bone, variable, genid)
             end
         end
     end
-    */
     /* */
 
 end
