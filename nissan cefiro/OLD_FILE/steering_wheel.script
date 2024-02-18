@@ -1,9 +1,0 @@
-// based on lua scripting languages
-
-local update = function(name,obj,bone,variable,genid)
-    obj:setAngles(bone:localToWorldAngles(Angle((variable.smoothsteeringAng / 20) * 350,0,0)))
-end
-
-return {
-    update = update
-}
