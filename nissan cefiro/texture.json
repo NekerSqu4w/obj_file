@@ -41,9 +41,12 @@
 		"licence_plate": {
 			"type": "VertexLitGeneric",
 			"diffuse": "licence_plate_d.png",
-			"normal": "licence_plate_n.png"
+			"normal": "licence_plate_n.png",
+			"textureParam": {
+				"$flags": "int(256)"
+			}
 		},
-		"tyre": {
+		"tire": {
 			"type": "VertexLitGeneric",
 			"diffuse": "tyre_d.png",
 			"normal": "tyre_n.png"
@@ -55,7 +58,10 @@
 		},
 		"volk_racing_brand": {
 			"type": "VertexLitGeneric",
-			"diffuse": "RAYS_2.png"
+			"diffuse": "RAYS_2.png",
+			"textureParam": {
+				"$flags": "int(256)"
+			}
 		}
 	}
 }

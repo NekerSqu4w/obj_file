@@ -120,11 +120,11 @@
 			"script": "car_script.lua"
 		},
 
-		"WheelTyre": {
+		"WheelTire": {
 			"count": 4,
 			"parentType": "wheels",
-			"load": ["wheel:tyre"],
-			"texture": "tyre",
+			"load": ["wheel:tire"],
+			"texture": "tire",
 			"bone": "base",
 			"script": "car_script.lua"
 		},
