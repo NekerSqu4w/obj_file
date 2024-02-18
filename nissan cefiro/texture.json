@@ -49,7 +49,10 @@
 		"tire": {
 			"type": "VertexLitGeneric",
 			"diffuse": "tyre_d.png",
-			"normal": "tyre_n.png"
+			"normal": "tyre_n.png",
+			"textureParam": {
+				"$phongexponent": "int(1300)"
+			}
 		},
 		"brake_disk": {
 			"type": "VertexLitGeneric",
