@@ -27,7 +27,7 @@
 			"load": ["body:body_stitches","body:fender","body:door","body:front_bumper","body:hood","body:mirror_part","body:rear_bumper","body:skirt","body:spoiler","body:trunk"],
 			"texture": "carpaint",
 			"bone": "base",
-			"color": {"r": 150,"g": 150,"b": 150,"a": 255}
+			"color": {"r": "$bodyColor.r$","g": "$bodyColor.g$","b": "$bodyColor.b$","a": 255}
 		},
 		"misc": {
 			"load": ["misc:car_floor","misc:engine_bay","misc:door_stitches","misc:other","misc:light_support"],
@@ -132,7 +132,7 @@
 			"count": 4,
 			"parentType": "wheels",
 			"load": ["wheel:rim"],
-			"color": {"r": 220,"g": 220,"b": 220,"a": 255},
+			"color": {"r": "$wheelColor.r$","g": "$wheelColor.g$","b": "$wheelColor.b$","a": 255},
 			"modifiers": [{"type": "remap.uv","settings": {"scale": 0.2}}],
 			"texture": "rim",
 			"bone": "base",
