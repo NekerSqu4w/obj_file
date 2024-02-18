@@ -42,6 +42,20 @@
 			"type": "VertexLitGeneric",
 			"diffuse": "licence_plate_d.png",
 			"normal": "licence_plate_n.png"
+		},
+		"tyre": {
+			"type": "VertexLitGeneric",
+			"diffuse": "tyre_d.png",
+			"normal": "tyre_n.png"
+		},
+		"brake_disk": {
+			"type": "VertexLitGeneric",
+			"diffuse": "exterior_disc_diff.png",
+			"normal": "exterior_disc_NM.png"
+		},
+		"volk_racing_brand": {
+			"type": "VertexLitGeneric",
+			"diffuse": "RAYS_2.png"
 		}
 	}
 }

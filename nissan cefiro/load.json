@@ -118,6 +118,59 @@
 			"texture": "interior",
 			"bone": "clutch_pedal",
 			"script": "car_script.lua"
+		},
+
+		"WheelTyre": {
+			"count": 4,
+			"parentType": "wheels",
+			"load": ["wheel:tyre"],
+			"texture": "tyre",
+			"bone": "base",
+			"script": "car_script.lua"
+		},
+		"WheelRim": {
+			"count": 4,
+			"parentType": "wheels",
+			"load": ["wheel:rim"],
+			"color": {"r": 220,"g": 220,"b": 220,"a": 255},
+			"modifiers": [{"type": "remap.uv","settings": {"scale": 0.2}}],
+			"texture": "carpaint",
+			"bone": "base",
+			"script": "car_script.lua"
+		},
+		"WheelBrakeDisk": {
+			"count": 4,
+			"parentType": "wheels",
+			"load": ["wheel:brake_disk"],
+			"texture": "brake_disk",
+			"bone": "base",
+			"script": "car_script.lua"
+		},
+		"WheelFakeShadow": {
+			"count": 4,
+			"parentType": "wheels",
+			"load": ["wheel:fake_shadow"],
+			"texture": "blackpaint",
+			"bone": "base",
+			"script": "car_script.lua"
+		},
+		"WheelRaceBrand": {
+			"count": 4,
+			"parentType": "wheels",
+			"load": ["wheel:racing_brand"],
+			"texture": "volk_racing_brand",
+			"bone": "base",
+			"script": "car_script.lua"
+		},
+		"WheelChrome": {
+			"count": 4,
+			"parentType": "wheels",
+			"load": ["wheel:chrome_part","wheel:nuts"],
+			"color": {"r": 50,"g": 50,"b": 50,"a": 255},
+			"modifiers": [{"type": "remap.uv","settings": {"scale": 0.2}}],
+			"texture": "carpaint",
+			"bone": "base",
+			"script": "car_script.lua"
 		}
     }
 }
