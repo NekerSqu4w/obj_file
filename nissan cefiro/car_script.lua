@@ -13,6 +13,7 @@ script.init = function(name, obj, bone, variable, genid)
                 obj:setAngles(wheels_parent:localToWorldAngles(Angle(0,180,0)))
             end
         end
+    end
     /* */
 
 end
