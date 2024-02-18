@@ -41,10 +41,7 @@
 		"licence_plate": {
 			"type": "VertexLitGeneric",
 			"diffuse": "licence_plate_d.png",
-			"normal": "licence_plate_n.png",
-			"textureParam": {
-				"$flags": "int(256)"
-			}
+			"normal": "licence_plate_n.png"
 		}
 	}
 }
