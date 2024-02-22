@@ -19,7 +19,7 @@ script.init = function(name, obj, bone, variable, genid)
 end
 
 script.update = function(name, obj, bone, variable, genid)
-    //name return current model name 'in this case it's 'RPMneedle' or 'KMHneedle''
+    //name return current model name
     //obj return the current obj entity
     //bone return the bones entity
     //variable return local variable setup inside of updateVariable()

@@ -47,18 +47,8 @@
 			"bone": "base"
 		},
 		"mirror_center": {
-			"load": ["mirror:mirror_center"],
-			"texture": "mirror_center",
-			"bone": "base"
-		},
-		"mirror_left": {
-			"load": ["mirror:mirror_left"],
-			"texture": "mirror_left",
-			"bone": "base"
-		},
-		"mirror_right": {
-			"load": ["mirror:mirror_right"],
-			"texture": "mirror_right",
+			"load": ["mirror:mirror_center","mirror:mirror_left","mirror:mirror_right"],
+			"texture": "mirror",
 			"bone": "base"
 		},
 		"windows": {
