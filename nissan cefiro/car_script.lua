@@ -1,6 +1,6 @@
-local script = {}
+local obj_script = {}
 
-script.init = function(name, obj, bone, variable, genid)
+obj_script.init = function(name, obj, bone, variable, genid)
 
     /* DO WHEEL PARENT */
     if obj.objInfo.parentType == "wheels" then
@@ -18,7 +18,7 @@ script.init = function(name, obj, bone, variable, genid)
 
 end
 
-script.update = function(name, obj, bone, variable, genid)
+obj_script.update = function(name, obj, bone, variable, genid)
     //name return current model name
     //obj return the current obj entity
     //bone return the bones entity
@@ -53,4 +53,4 @@ script.update = function(name, obj, bone, variable, genid)
     /* */
 end
 
-return script
+return obj_script
