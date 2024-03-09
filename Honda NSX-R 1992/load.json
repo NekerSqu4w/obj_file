@@ -1,0 +1,17 @@
+{
+    "bones": {
+		"base": {"position": {"x": 0,"y": 0,"z": 0},"rotation": {"x": 0,"y": 0,"z": 0}}
+	},
+    "cached_mdl": {
+		"body": {"path": "body.obj","modifiers": [{"type": "remap.uv","settings": {"scale": 0.1}}]}
+	},
+    "map_models": {
+        "body": {
+			"load": ["body:body_stitches"],
+			"texture": "carpaint",
+			"bone": "base",
+			"color": {"r": "$bodyColor.r$","g": "$bodyColor.g$","b": "$bodyColor.b$","a": 255},
+			"script": "car_script.lua"
+		}
+    }
+}

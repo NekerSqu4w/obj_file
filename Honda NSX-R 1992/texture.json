@@ -1,0 +1,15 @@
+{
+	"folder": "textures/",
+	"textures": {
+		"example_default": {
+			"diffuse": "$default:sprops/textures/sprops_metal4"
+		},
+		"example_custom": {
+			"type": "VertexLitGeneric",
+			"diffuse": "lights_front.png",
+			"textureParam": {
+				"$flags": "int(256)"
+			}
+		}
+	}
+}
