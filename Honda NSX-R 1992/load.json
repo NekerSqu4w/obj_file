@@ -3,7 +3,7 @@
 		"base": {"position": {"x": 0,"y": 0,"z": 0},"rotation": {"x": 0,"y": 0,"z": 0}}
 	},
     "cached_mdl": {
-		"body": {"path": "body.obj","modifiers": [{"type": "remap.uv","settings": {"scale": 0.1}}]}
+		"body": {"path": "body.obj"}
 	},
     "map_models": {
         "body": {
