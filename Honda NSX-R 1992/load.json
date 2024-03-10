@@ -7,10 +7,20 @@
 	},
     "map_models": {
         "body": {
-			"load": ["full_model:Body","full_model:Front_Bumper","full_model:Hood","full_model:Rear_Bumper"],
+			"load": ["full_model:Body","full_model:Body.001","full_model:Front_Bumper","full_model:Hood","full_model:Rear_Bumper"],
 			"texture": "BodyDetail",
 			"bone": "base",
 			"color": {"r": "$bodyColor.r$","g": "$bodyColor.g$","b": "$bodyColor.b$","a": 255}
+		},
+		"logo": {
+			"load": ["full_model:Front_Bumper_Logo"],
+			"texture": "BodyDetail",
+			"bone": "base"
+		},
+		"tailight": {
+			"load": ["full_model:Body.003"],
+			"texture": "BodyDetail",
+			"bone": "base"
 		}
     }
 }
