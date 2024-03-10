@@ -1,7 +1,7 @@
 {
 	"folder": "textures/",
 	"textures": {
-		"carpaint": {
+		"BodyDetail": {
 			"type": "VertexLitGeneric",
 			"diffuse": "BodyDetail.png",
 			"textureParam": {

@@ -3,15 +3,14 @@
 		"base": {"position": {"x": 0,"y": 0,"z": 0},"rotation": {"x": 0,"y": 0,"z": 0}}
 	},
     "cached_mdl": {
-		"body": {"path": "body.obj"}
+		"full_model": {"path": "full model.obj"}
 	},
     "map_models": {
         "body": {
-			"load": ["body:Body"],
-			"texture": "carpaint",
+			"load": ["full_model:Body","full_model:Front_Bumper","full_model:Hood","full_model:Rear_Bumper"],
+			"texture": "BodyDetail",
 			"bone": "base",
-			"color": {"r": "$bodyColor.r$","g": "$bodyColor.g$","b": "$bodyColor.b$","a": 255},
-			"script": "car_script.lua"
+			"color": {"r": "$bodyColor.r$","g": "$bodyColor.g$","b": "$bodyColor.b$","a": 255}
 		}
     }
 }
