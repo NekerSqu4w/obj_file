@@ -1,6 +1,6 @@
 {
     "bones": {
-		"base": {"position": {"x": 0,"y": 0,"z": 0},"rotation": {"x": 0,"y": 0,"z": 0}}
+		"base": {"position": {"x": 0,"y": 0,"z": 9},"rotation": {"x": 0,"y": 0,"z": 0}}
 	},
     "cached_mdl": {
 		"full_model": {"path": "full model.obj"}
