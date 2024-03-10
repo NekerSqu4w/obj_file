@@ -2,11 +2,8 @@
 	"folder": "textures/",
 	"textures": {
 		"carpaint": {
-			"diffuse": "$default:sprops/textures/sprops_metal4"
-		},
-		"example_custom": {
 			"type": "VertexLitGeneric",
-			"diffuse": "lights_front.png",
+			"diffuse": "BodyDetail.png",
 			"textureParam": {
 				"$flags": "int(256)"
 			}
