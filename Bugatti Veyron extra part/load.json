@@ -6,7 +6,8 @@
 		"onboard_console": {"path": "onboard_console.obj"},
 		"speedo_textured": {"path": "speedo_textured.obj"},
 		"badge": {"path": "some_badge.obj"},
-		"red_back_light": {"path": "red_back_light.obj"}
+		"red_back_light": {"path": "red_back_light.obj"},
+		"reverse_light": {"path": "reverse_light.obj"},
 	},
     "map_models": {
         "onboard_console": {
