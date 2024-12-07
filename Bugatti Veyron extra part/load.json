@@ -5,7 +5,8 @@
     "cached_mdl": {
 		"onboard_console": {"path": "onboard_console.obj"},
 		"speedo_textured": {"path": "speedo_textured.obj"},
-		"badge": {"path": "some_badge.obj"}
+		"badge": {"path": "some_badge.obj"},
+		"red_back_light": {"path": "red_back_light.obj"}
 	},
     "map_models": {
         "onboard_console": {
@@ -25,6 +26,13 @@
 			"texture": "badge",
 			"bone": "base",
 			"color": {"r": 255,"g": 255,"b": 255,"a": 255}
+		},
+        "red_back_light": {
+			"load": ["red_back_light:Kit3_Window_Geo_lodA.001"],
+			"texture": "red_back_light",
+			"bone": "base",
+			"color": {"r": 0,"g": 0,"b": 0,"a": 255},
+			"script": "car_script.lua"
 		}
     }
 }
