@@ -10,7 +10,7 @@
 			"diffuse": "badge.png"
 		},
 		"lights": {
-			"diffuse": "$default:phoenix_storms/mat/mat_phx_metallic2"
+			"diffuse": "$default:debug/debugdrawflat"
 		}
 	}
 }
