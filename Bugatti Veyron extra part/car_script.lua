@@ -20,12 +20,6 @@ obj_script.update = function(name, obj, bone, variable, genid)
         obj:setColor(variable.brake > 0 and obj_script.red_light or obj_script.off_light)
     end
     /* */
-	
-	/* REVERSE_LIGHT */
-    if name == "reverse_light" then
-        obj:setColor(variable.reverse > 0 and obj_script.reverse_light or obj_script.off_light)
-    end
-    /* */
 end
 
 return obj_script
