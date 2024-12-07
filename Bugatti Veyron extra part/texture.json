@@ -3,7 +3,7 @@
 	"textures": {
 		"interior": {
 			"type": "VertexLitGeneric",
-			"diffuse": "a_interior.png"
+			"diffuse": "interior.png"
 		}
 	}
 }
