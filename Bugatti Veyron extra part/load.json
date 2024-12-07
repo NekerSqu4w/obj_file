@@ -6,8 +6,10 @@
 		"onboard_console": {"path": "onboard_console.obj"},
 		"speedo_textured": {"path": "speedo_textured.obj"},
 		"badge": {"path": "some_badge.obj"},
-		"red_back_light": {"path": "red_back_light.obj"},
-		"reverse_light": {"path": "reverse_light.obj"}
+		"brake_light": {"path": "brake_light.obj"},
+		"front_healight": {"path": "front_healight.obj"},
+		"reverse_light": {"path": "reverse_light.obj"},
+		"tail_light": {"path": "tail_light.obj"}
 	},
     "map_models": {
         "onboard_console": {
@@ -28,8 +30,29 @@
 			"bone": "base",
 			"color": {"r": 255,"g": 255,"b": 255,"a": 255}
 		},
-        "red_back_light": {
-			"load": ["red_back_light:Kit3_Window_Geo_lodA.001"],
+        "brake_light": {
+			"load": ["brake_light:Kit3_Window_Geo_lodA.001"],
+			"texture": "lights",
+			"bone": "base",
+			"script": "car_script.lua",
+			"color": {"r": 0,"g": 0,"b": 0,"a": 255}
+		},
+        "front_healight": {
+			"load": ["front_healight:Kit3_Light_Geo_lodA.329"],
+			"texture": "lights",
+			"bone": "base",
+			"script": "car_script.lua",
+			"color": {"r": 0,"g": 0,"b": 0,"a": 255}
+		},
+        "reverse_light": {
+			"load": ["reverse_light:Kit3_Light_Geo_lodA.016"],
+			"texture": "lights",
+			"bone": "base",
+			"script": "car_script.lua",
+			"color": {"r": 0,"g": 0,"b": 0,"a": 255}
+		},
+        "tail_light": {
+			"load": ["tail_light:Kit3_Light_Geo_lodA.005"],
 			"texture": "lights",
 			"bone": "base",
 			"script": "car_script.lua",
