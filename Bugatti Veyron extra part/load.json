@@ -8,7 +8,7 @@
 	},
     "map_models": {
         "onboard_console": {
-			"load": ["onboard_console:Kit3_Interior_Geo_lodA.048"],
+			"load": ["onboard_console:Kit3_Interior_Geo_lodA.018"],
 			"texture": "interior",
 			"bone": "base",
 			"color": {"r": 255,"g": 255,"b": 255,"a": 255}
