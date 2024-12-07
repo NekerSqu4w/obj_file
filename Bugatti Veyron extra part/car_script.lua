@@ -3,7 +3,7 @@ local obj_script = {}
 obj_script.off_light = Color(0, 0, 0)
 obj_script.on_light = Color(255, 255, 255)
 obj_script.red_light = Color(255, 0, 0)
-obj_script.off_red_light = Color(80, 80, 80)
+obj_script.off_red_light = Color(80, 0, 0)
 obj_script.reverse_light = Color(255, 255, 255)
 
 obj_script.init = function(name, obj, bone, variable, genid)
