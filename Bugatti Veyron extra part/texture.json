@@ -4,6 +4,10 @@
 		"interior": {
 			"type": "VertexLitGeneric",
 			"diffuse": "interior.png"
+		},
+		"badge": {
+			"type": "VertexLitGeneric",
+			"diffuse": "badge.png"
 		}
 	}
 }

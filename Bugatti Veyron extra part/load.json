@@ -4,7 +4,8 @@
 	},
     "cached_mdl": {
 		"onboard_console": {"path": "onboard_console.obj"},
-		"speedo_textured": {"path": "speedo_textured.obj"}
+		"speedo_textured": {"path": "speedo_textured.obj"},
+		"badge": {"path": "some_badge.obj"}
 	},
     "map_models": {
         "onboard_console": {
@@ -16,6 +17,12 @@
         "speedo_textured": {
 			"load": ["speedo_textured:Kit3_Interior_Geo_lodA.011"],
 			"texture": "interior",
+			"bone": "base",
+			"color": {"r": 255,"g": 255,"b": 255,"a": 255}
+		},
+        "badge": {
+			"load": ["badge:Kit3_Badge_Geo_lodA.010"],
+			"texture": "badge",
 			"bone": "base",
 			"color": {"r": 255,"g": 255,"b": 255,"a": 255}
 		}
