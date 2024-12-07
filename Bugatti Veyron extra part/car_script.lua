@@ -3,6 +3,7 @@ local obj_script = {}
 obj_script.off_light = Color(0, 0, 0)
 obj_script.on_light = Color(255, 255, 255)
 obj_script.red_light = Color(255, 0, 0)
+obj_script.off_red_light = Color(80, 80, 80)
 obj_script.reverse_light = Color(255, 255, 255)
 
 obj_script.init = function(name, obj, bone, variable, genid)
@@ -18,13 +19,13 @@ obj_script.update = function(name, obj, bone, variable, genid)
 	
 	/* BACK_LIGHT */
     if name == "brake_light" then
-        obj:setColor(variable.brake > 0 and obj_script.red_light or obj_script.off_light)
+        obj:setColor(variable.brake > 0 and obj_script.red_light or obj_script.off_red_light)
     end
     /* */
 	
 	/* TAIL_LIGHT */
     if name == "tail_light" then
-        obj:setColor(variable.headlight > 0 and obj_script.red_light or obj_script.off_light)
+        obj:setColor(variable.headlight > 0 and obj_script.red_light or obj_script.off_red_light)
     end
     /* */
 	
