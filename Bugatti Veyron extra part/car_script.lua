@@ -16,7 +16,7 @@ obj_script.update = function(name, obj, bone, variable, genid)
 	
 	/* BACK_LIGHT */
     if name == "red_back_light" then
-        obj:setColor(variable.brake and obj_script.red_light or obj_script.off_light)
+        obj:setColor(variable.brake > 0 and obj_script.red_light or obj_script.off_light)
     end
     /* */
 end
