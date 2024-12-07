@@ -9,7 +9,7 @@
 			"type": "VertexLitGeneric",
 			"diffuse": "badge.png"
 		},
-		"badge": {
+		"lights": {
 			"diffuse": "$default:WTP/chrome_1"
 		}
 	}

@@ -2,6 +2,7 @@ local obj_script = {}
 
 obj_script.off_light = Color(0, 0, 0)
 obj_script.red_light = Color(255, 0, 0)
+obj_script.reverse_light = Color(255, 255, 255)
 
 obj_script.init = function(name, obj, bone, variable, genid)
 end
@@ -17,6 +18,12 @@ obj_script.update = function(name, obj, bone, variable, genid)
 	/* BACK_LIGHT */
     if name == "red_back_light" then
         obj:setColor(variable.brake > 0 and obj_script.red_light or obj_script.off_light)
+    end
+    /* */
+	
+	/* REVERSE_LIGHT */
+    if name == "reverse_light" then
+        obj:setColor(variable.reverse > 0 and obj_script.reverse_light or obj_script.off_light)
     end
     /* */
 end

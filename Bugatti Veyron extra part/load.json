@@ -29,10 +29,17 @@
 		},
         "red_back_light": {
 			"load": ["red_back_light:Kit3_Window_Geo_lodA.001"],
-			"texture": "red_back_light",
+			"texture": "lights",
 			"bone": "base",
-			"color": {"r": 0,"g": 0,"b": 0,"a": 255},
 			"script": "car_script.lua"
+			"color": {"r": 0,"g": 0,"b": 0,"a": 255}
+		},
+        "reverse_light": {
+			"load": ["reverse_light:Kit3_Light_Geo_lodA.005"],
+			"texture": "lights",
+			"bone": "base",
+			"script": "car_script.lua"
+			"color": {"r": 0,"g": 0,"b": 0,"a": 255}
 		}
     }
 }
