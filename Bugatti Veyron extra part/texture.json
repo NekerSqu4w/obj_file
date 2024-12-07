@@ -3,10 +3,7 @@
 	"textures": {
 		"interior": {
 			"type": "VertexLitGeneric",
-			"diffuse": "interior.png",
-			"textureParam": {
-				"$flags": "int(256)"
-			}
+			"diffuse": "interior.png"
 		}
 	}
 }
