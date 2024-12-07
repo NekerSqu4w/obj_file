@@ -3,8 +3,7 @@
 		"base": {"position": {"x": 0,"y": 0,"z": 0},"rotation": {"x": 0,"y": 0,"z": 0}}
 	},
     "cached_mdl": {
-		"interrior_console": {"path": "onboard_console.obj"},
-		"interior_textured": {"path": "interior_textured.obj"},
+		"onboard_console": {"path": "onboard_console.obj"},
 		"speedo_textured": {"path": "speedo_textured.obj"}
 	},
     "map_models": {
@@ -14,13 +13,7 @@
 			"bone": "base",
 			"color": {"r": 255,"g": 255,"b": 255,"a": 255}
 		},
-        "interior_textured": {
-			"load": ["interior_textured:Kit3_Interior_Geo_lodA.052"],
-			"texture": "interior",
-			"bone": "base",
-			"color": {"r": 255,"g": 255,"b": 255,"a": 255}
-		},
-        "interior_speedo": {
+        "speedo_textured": {
 			"load": ["speedo_textured:Kit3_Interior_Geo_lodA.011"],
 			"texture": "interior",
 			"bone": "base",
