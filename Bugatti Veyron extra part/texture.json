@@ -11,6 +11,9 @@
 		},
 		"lights": {
 			"diffuse": "$default:debug/debugdrawflat"
+		},
+		"other_lights": {
+			"diffuse": "$default:WTP/chrome_7"
 		}
 	}
 }

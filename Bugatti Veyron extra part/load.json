@@ -32,7 +32,7 @@
 		},
         "brake_light": {
 			"load": ["brake_light:Kit3_Window_Geo_lodA.001"],
-			"texture": "lights",
+			"texture": "other_lights",
 			"bone": "base",
 			"script": "car_script.lua",
 			"color": {"r": 0,"g": 0,"b": 0,"a": 255}
@@ -46,14 +46,14 @@
 		},
         "reverse_light": {
 			"load": ["reverse_light:Kit3_Light_Geo_lodA.016"],
-			"texture": "lights",
+			"texture": "other_lights",
 			"bone": "base",
 			"script": "car_script.lua",
 			"color": {"r": 0,"g": 0,"b": 0,"a": 255}
 		},
         "tail_light": {
 			"load": ["tail_light:Kit3_Light_Geo_lodA.005"],
-			"texture": "lights",
+			"texture": "other_lights",
 			"bone": "base",
 			"script": "car_script.lua",
 			"color": {"r": 0,"g": 0,"b": 0,"a": 255}
