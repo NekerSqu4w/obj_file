@@ -31,7 +31,7 @@ obj_script.update = function(name, obj, bone, variable, genid)
     /* */
 	
 	/* HEADLIGHT */
-    if name == "front_healight" then
+    if name == "healight" then
         obj:setColor(variable.headlight > 0 and obj_script.on_light or obj_script.off_light)
     end
     /* */

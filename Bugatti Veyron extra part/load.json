@@ -7,7 +7,7 @@
 		"speedo_textured": {"path": "speedo_textured.obj"},
 		"badge": {"path": "some_badge.obj"},
 		"brake_light": {"path": "brake_light.obj"},
-		"front_healight": {"path": "front_healight.obj"},
+		"headlight": {"path": "headlight.obj"},
 		"reverse_light": {"path": "reverse_light.obj"},
 		"tail_light": {"path": "tail_light.obj"}
 	},
@@ -37,8 +37,8 @@
 			"script": "car_script.lua",
 			"color": {"r": 0,"g": 0,"b": 0,"a": 255}
 		},
-        "front_healight": {
-			"load": ["front_healight:Kit3_Light_Geo_lodA.329"],
+        "headlight": {
+			"load": ["headlight:Kit3_Light_Geo_lodA.084"],
 			"texture": "lights",
 			"bone": "base",
 			"script": "car_script.lua",
