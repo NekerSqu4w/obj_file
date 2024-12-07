@@ -1,7 +1,7 @@
 {
 	"folder": "textures/",
 	"textures": {
-		"Interior": {
+		"interior": {
 			"type": "VertexLitGeneric",
 			"diffuse": "interior.png",
 			"textureParam": {
