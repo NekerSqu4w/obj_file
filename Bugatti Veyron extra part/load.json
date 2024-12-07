@@ -32,7 +32,7 @@
 			"load": ["red_back_light:Kit3_Window_Geo_lodA.001"],
 			"texture": "lights",
 			"bone": "base",
-			"script": "car_script.lua"
+			"script": "car_script.lua",
 			"color": {"r": 0,"g": 0,"b": 0,"a": 255}
 		},
         "reverse_light": {
