@@ -9,7 +9,7 @@
 	},
     "map_models": {
         "interior_console": {
-			"load": ["interrior_console:Kit3_Interior_Geo_lodA.074"],
+			"load": ["interrior_console:Kit3_Interior_Geo_lodA.048"],
 			"texture": "interior",
 			"bone": "base",
 			"color": {"r": 255,"g": 255,"b": 255,"a": 255}
