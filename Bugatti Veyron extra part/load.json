@@ -1,0 +1,16 @@
+{
+    "bones": {
+		"base": {"position": {"x": 0,"y": 0,"z": 0},"rotation": {"x": 0,"y": 0,"z": 0}}
+	},
+    "cached_mdl": {
+		"interrior_console": {"path": "interrior_console_textured.obj"}
+	},
+    "map_models": {
+        "body": {
+			"load": ["interrior_console:Kit3_Interior_Geo_lodA.074"],
+			"texture": "interior",
+			"bone": "base",
+			"color": {"r": 255,"g": 255,"b": 255,"a": 255}
+		}
+    }
+}

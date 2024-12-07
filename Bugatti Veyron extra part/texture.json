@@ -1,0 +1,12 @@
+{
+	"folder": "textures/",
+	"textures": {
+		"Interior": {
+			"type": "VertexLitGeneric",
+			"diffuse": "interior.png",
+			"textureParam": {
+				"$flags": "int(256)"
+			}
+		}
+	}
+}
