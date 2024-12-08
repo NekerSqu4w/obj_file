@@ -3,8 +3,7 @@
 	"textures": {
 		"interior": {
 			"type": "VertexLitGeneric",
-			"diffuse": "interior.png",
-			"normal": "interior_normal.png"
+			"diffuse": "interior.png"
 		},
 		"badge": {
 			"type": "VertexLitGeneric",
