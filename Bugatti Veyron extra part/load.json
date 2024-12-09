@@ -5,7 +5,7 @@
 		"speed_needle": {"position": {"x": 34.34,"y": 11.969,"z": 31.852},"rotation": {"x": 0,"y": 15.72,"z": 0}},
 		"power_needle": {"position": {"x": 34.34,"y": 19.924,"z": 31.852},"rotation": {"x": 0,"y": 15.72,"z": 0}},
 		"rpm_needle": {"position": {"x": 35.139,"y": 15.928,"z": 33.732},"rotation": {"x": 0,"y": 15.72,"z": 0}},
-		"steering": {"position": {"x": 35.139,"y": 15.928,"z": 33.732},"rotation": {"x": 0,"y": 15.72,"z": 0}}
+		"steering": {"position": {"x": 28.025,"y": 15.963,"z": 29.717},"rotation": {"x": 0,"y": 15.72,"z": 0}}
 	},
     "cached_mdl": {
 		"onboard_console": {"path": "onboard_console.obj"},
@@ -16,8 +16,7 @@
 		"reverse_light": {"path": "reverse_light.obj"},
 		"tail_light": {"path": "tail_light.obj"},
 		"interior_extra_part": {"path": "interior_extra_part.obj"},
-		
-		"steering_wheel": {"path": "steering.obj"}
+		"steering_wheel": {"path": "steering.obj","modifiers": [{"type": "remap.uv","settings": {"scale": 0.1}}]}
 	},
     "map_models": {
         "onboard_console": {
