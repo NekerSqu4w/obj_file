@@ -1,10 +1,11 @@
 {
     "bones": {
 		"base": {"position": {"x": 0,"y": 0,"z": 0},"rotation": {"x": 0,"y": 0,"z": 0}},
-		"clock_needle": {"position": {"x": 33.196,"y": 0,"z": 32.024},"rotation": {"x": 0,"y": 44,"z": 0}},
+		"clock_needle": {"position": {"x": 33.224,"y": 0,"z": 32.054},"rotation": {"x": 0,"y": 44,"z": 0}},
 		"speed_needle": {"position": {"x": 34.34,"y": 11.969,"z": 31.852},"rotation": {"x": 0,"y": 15.72,"z": 0}},
 		"power_needle": {"position": {"x": 34.34,"y": 19.924,"z": 31.852},"rotation": {"x": 0,"y": 15.72,"z": 0}},
-		"rpm_needle": {"position": {"x": 35.139,"y": 15.928,"z": 33.732},"rotation": {"x": 0,"y": 15.72,"z": 0}}
+		"rpm_needle": {"position": {"x": 35.139,"y": 15.928,"z": 33.732},"rotation": {"x": 0,"y": 15.72,"z": 0}},
+		"steering": {"position": {"x": 35.139,"y": 15.928,"z": 33.732},"rotation": {"x": 0,"y": 15.72,"z": 0}}
 	},
     "cached_mdl": {
 		"onboard_console": {"path": "onboard_console.obj"},
@@ -14,7 +15,9 @@
 		"headlight": {"path": "headlight.obj"},
 		"reverse_light": {"path": "reverse_light.obj"},
 		"tail_light": {"path": "tail_light.obj"},
-		"interior_extra_part": {"path": "interior_extra_part.obj"}
+		"interior_extra_part": {"path": "interior_extra_part.obj"},
+		
+		"steering_wheel": {"path": "steering.obj"}
 	},
     "map_models": {
         "onboard_console": {
@@ -68,6 +71,36 @@
 			"bone": "base",
 			"script": "car_script.lua",
 			"color": {"r": 0,"g": 0,"b": 0,"a": 255}
+		},
+		
+		
+        "steering_chrome": {
+			"load": ["steering_wheel:steering_chrome"],
+			"texture": "chrome",
+			"bone": "steering",
+			"script": "steering_script.lua",
+			"color": {"r": "$steering_chrome_color.r$","g": "$steering_chrome_color.g$","b": "$steering_chrome_color.b$","a": 255}
+		},
+        "steering_color": {
+			"load": ["steering_wheel:steering_color"],
+			"texture": "cloth",
+			"bone": "steering",
+			"script": "steering_script.lua",
+			"color": {"r": "$steering_color.r$","g": "$steering_color.g$","b": "$steering_color.b$","a": 255}
+		},
+        "steering_color2": {
+			"load": ["steering_wheel:steering_color2"],
+			"texture": "leather",
+			"bone": "steering",
+			"script": "steering_script.lua",
+			"color": {"r": "$steering_color2.r$","g": "$steering_color2.g$","b": "$steering_color2.b$","a": 255}
+		},
+        "steering_seam": {
+			"load": ["steering_wheel:steering_seam"],
+			"texture": "leather",
+			"bone": "steering",
+			"script": "steering_script.lua",
+			"color": {"r": "$steering_color2.r$","g": "$steering_color2.g$","b": "$steering_color2.b$","a": 255}
 		}
     }
 }

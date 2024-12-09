@@ -18,6 +18,15 @@
 		},
 		"other_lights": {
 			"diffuse": "$default:WTP/chrome_7"
+		},
+		"leather": {
+			"diffuse": "$default:WTP/leather_2"
+		},
+		"chrome": {
+			"diffuse": "$default:sprops/textures/sprops_chrome"
+		},
+		"cloth": {
+			"diffuse": "$default:WTP/cloth_1"
 		}
 	}
 }
