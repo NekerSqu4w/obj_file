@@ -5,6 +5,10 @@
 			"type": "VertexLitGeneric",
 			"diffuse": "interior.png"
 		},
+		"interior_extra": {
+			"type": "VertexLitGeneric",
+			"diffuse": "interior_extra.png"
+		},
 		"badge": {
 			"type": "VertexLitGeneric",
 			"diffuse": "badge.png"

@@ -9,12 +9,19 @@
 		"brake_light": {"path": "brake_light.obj"},
 		"headlight": {"path": "headlight.obj"},
 		"reverse_light": {"path": "reverse_light.obj"},
-		"tail_light": {"path": "tail_light.obj"}
+		"tail_light": {"path": "tail_light.obj"},
+		"interior_extra_part": {"path": "interior_extra_part.obj"}
 	},
     "map_models": {
         "onboard_console": {
 			"load": ["onboard_console:Kit3_Interior_Geo_lodA.018"],
 			"texture": "interior",
+			"bone": "base",
+			"color": {"r": 255,"g": 255,"b": 255,"a": 255}
+		},
+        "interior_extra_part": {
+			"load": ["interior_extra_part:Kit3_Interior_Geo_lodA.138"],
+			"texture": "interior_extra",
 			"bone": "base",
 			"color": {"r": 255,"g": 255,"b": 255,"a": 255}
 		},
