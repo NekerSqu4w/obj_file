@@ -5,7 +5,9 @@
 		"speed_needle": {"position": {"x": 34.34,"y": 11.969,"z": 31.852},"rotation": {"x": 0,"y": 15.72,"z": 0}},
 		"power_needle": {"position": {"x": 34.34,"y": 19.924,"z": 31.852},"rotation": {"x": 0,"y": 15.72,"z": 0}},
 		"rpm_needle": {"position": {"x": 35.139,"y": 15.928,"z": 33.732},"rotation": {"x": 0,"y": 15.72,"z": 0}},
-		"steering": {"position": {"x": 28.025,"y": 15.963,"z": 29.717},"rotation": {"x": 0,"y": 15.72,"z": 0}}
+		"steering": {"position": {"x": 28.025,"y": 15.963,"z": 29.717},"rotation": {"x": 0,"y": 15.72,"z": 0}},
+		"temp_needle": {"position": {"x": 35.121,"y": 19.523,"z": 34.625},"rotation": {"x": 0,"y": 15.72,"z": 0}},
+		"fuel_needle": {"position": {"x": 35.12,"y": 12.384,"z": 34.622},"rotation": {"x": 0,"y": 15.72,"z": 0}}
 	},
     "cached_mdl": {
 		"onboard_console": {"path": "onboard_console.obj"},
@@ -32,6 +34,12 @@
 			"texture": "interior_extra",
 			"bone": "base",
 			"color": {"r": 255,"g": 255,"b": 255,"a": 255}
+		},
+        "interior_seam": {
+			"load": ["interior_seam:Kit3_Interior_Geo_lodA.494"],
+			"texture": "interior",
+			"bone": "base",
+			"color": {"r": 255, "g": 255,"b": 255,"a": 255}
 		},
         "speedo_textured": {
 			"load": ["speedo_textured:Kit3_Interior_Geo_lodA.011"],
@@ -101,12 +109,6 @@
 			"texture": "interior",
 			"bone": "steering",
 			"script": "steering_script.lua",
-			"color": {"r": 255, "g": 255,"b": 255,"a": 255}
-		},
-        "interior_seam": {
-			"load": ["interior_seam:Kit3_Interior_Geo_lodA.494"],
-			"texture": "interior",
-			"bone": "base",
 			"color": {"r": 255, "g": 255,"b": 255,"a": 255}
 		}
     }
