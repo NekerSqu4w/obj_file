@@ -4,7 +4,7 @@
 		"clock_needle": {"position": {"x": 33.196,"y": 0,"z": 32.024},"rotation": {"x": 0,"y": 44,"z": 0}},
 		"speed_needle": {"position": {"x": 34.34,"y": 11.969,"z": 31.852},"rotation": {"x": 0,"y": 15.72,"z": 0}},
 		"power_needle": {"position": {"x": 34.34,"y": 19.924,"z": 31.852},"rotation": {"x": 0,"y": 15.72,"z": 0}},
-		"rpm_needle": {"position": {"x": 34.34,"y": 15.928,"z": 33.732},"rotation": {"x": 0,"y": 15.72,"z": 0}}
+		"rpm_needle": {"position": {"x": 35.139,"y": 15.928,"z": 33.732},"rotation": {"x": 0,"y": 15.72,"z": 0}}
 	},
     "cached_mdl": {
 		"onboard_console": {"path": "onboard_console.obj"},
