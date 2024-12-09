@@ -18,7 +18,7 @@
 		"interior_extra_part": {"path": "interior_extra_part.obj"},
 		"steering_wheel": {"path": "steering.obj","modifiers": [{"type": "remap.uv","settings": {"scale": 0.1}}]},
 		"steering_seam": {"path": "steering_seam.obj"},
-		"interrior_seam": {"path": "interrior_seam.obj"}
+		"interior_seam": {"path": "interior_seam.obj"}
 	},
     "map_models": {
         "onboard_console": {
@@ -97,7 +97,7 @@
 			"color": {"r": "$steering_color2.r$","g": "$steering_color2.g$","b": "$steering_color2.b$","a": 255}
 		},
         "steering_seam": {
-			"load": ["steering_wheel:steering_seam"],
+			"load": ["steering_seam:steering_seam"],
 			"texture": "interior",
 			"bone": "steering",
 			"script": "steering_script.lua",
