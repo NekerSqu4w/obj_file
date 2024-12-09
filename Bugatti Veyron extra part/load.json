@@ -99,7 +99,7 @@
 			"texture": "interior",
 			"bone": "steering",
 			"script": "steering_script.lua",
-			"color": {"r": "$steering_color.r$","g": "$steering_color.g$","b": "$steering_color.b$","a": 255}
+			"color": {"r": 255, "g": 255,"b": 255,"a": 255}
 		}
     }
 }
