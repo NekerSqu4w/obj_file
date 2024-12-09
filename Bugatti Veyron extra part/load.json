@@ -96,7 +96,7 @@
 		},
         "steering_seam": {
 			"load": ["steering_wheel:steering_seam"],
-			"texture": "leather",
+			"texture": "cloth",
 			"bone": "steering",
 			"script": "steering_script.lua",
 			"color": {"r": "$steering_color2.r$","g": "$steering_color2.g$","b": "$steering_color2.b$","a": 255}

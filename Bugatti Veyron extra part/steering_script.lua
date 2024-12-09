@@ -14,7 +14,7 @@ obj_script.update = function(name, obj, bone, variable, genid)
 	local valid_obj = name == "steering_chrome" or name == "steering_color" or name == "steering_color2" or name == "steering_seam"
 	
     if valid_obj then
-		obj:setAngles(bone:localToWorldAngles(Angle(rotation_angle,0,0)))
+		obj:setAngles(bone:localToWorldAngles(Angle(-rotation_angle,0,0)))
     end
 end
 
