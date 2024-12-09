@@ -16,7 +16,9 @@
 		"reverse_light": {"path": "reverse_light.obj"},
 		"tail_light": {"path": "tail_light.obj"},
 		"interior_extra_part": {"path": "interior_extra_part.obj"},
-		"steering_wheel": {"path": "steering.obj","modifiers": [{"type": "remap.uv","settings": {"scale": 0.1}}]}
+		"steering_wheel": {"path": "steering.obj","modifiers": [{"type": "remap.uv","settings": {"scale": 0.1}}]},
+		"steering_seam": {"path": "steering_seam.obj"},
+		"interrior_seam": {"path": "interrior_seam.obj"}
 	},
     "map_models": {
         "onboard_console": {
@@ -99,6 +101,12 @@
 			"texture": "interior",
 			"bone": "steering",
 			"script": "steering_script.lua",
+			"color": {"r": 255, "g": 255,"b": 255,"a": 255}
+		},
+        "interior_seam": {
+			"load": ["interior_seam:Kit3_Interior_Geo_lodA.494"],
+			"texture": "interior",
+			"bone": "base",
 			"color": {"r": 255, "g": 255,"b": 255,"a": 255}
 		}
     }
