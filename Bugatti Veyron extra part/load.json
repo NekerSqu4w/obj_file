@@ -6,8 +6,8 @@
 		"power_needle": {"position": {"x": 34.34,"y": 19.924,"z": 31.852},"rotation": {"x": 0,"y": 15.72,"z": 0}},
 		"rpm_needle": {"position": {"x": 35.139,"y": 15.928,"z": 33.732},"rotation": {"x": 0,"y": 15.72,"z": 0}},
 		"steering": {"position": {"x": 28.025,"y": 15.963,"z": 29.717},"rotation": {"x": 0,"y": 15.72,"z": 0}},
-		"temp_needle": {"position": {"x": 35.121,"y": 19.523,"z": 34.625},"rotation": {"x": 0,"y": 15.72,"z": 0}},
-		"fuel_needle": {"position": {"x": 35.12,"y": 12.384,"z": 34.622},"rotation": {"x": 0,"y": 15.72,"z": 0}}
+		"temp_needle": {"position": {"x": 35.092,"y": 19.523,"z": 34.633},"rotation": {"x": 0,"y": 15.72,"z": 0}},
+		"fuel_needle": {"position": {"x": 35.092,"y": 12.384,"z": 34.633},"rotation": {"x": 0,"y": 15.72,"z": 0}}
 	},
     "cached_mdl": {
 		"onboard_console": {"path": "onboard_console.obj"},
@@ -17,7 +17,8 @@
 		"interior_extra_part": {"path": "interior_extra_part.obj"},
 		"steering_wheel": {"path": "steering.obj","modifiers": [{"type": "remap.uv","settings": {"scale": 0.1}}]},
 		"steering_seam": {"path": "steering_seam.obj"},
-		"interior_seam": {"path": "interior_seam.obj"}
+		"interior_seam": {"path": "interior_seam.obj"},
+		"needles": {"path": "needles.obj"}
 	},
     "map_models": {
         "onboard_console": {
@@ -54,28 +55,28 @@
 			"load": ["lights:Kit3_Window_Geo_lodA.001"],
 			"texture": "other_lights",
 			"bone": "base",
-			"script": "car_script.lua",
+			"script": "lights_script.lua",
 			"color": {"r": 0,"g": 0,"b": 0,"a": 255}
 		},
         "headlight": {
 			"load": ["lights:Kit3_Light_Geo_lodA.084"],
 			"texture": "lights",
 			"bone": "base",
-			"script": "car_script.lua",
+			"script": "lights_script.lua",
 			"color": {"r": 0,"g": 0,"b": 0,"a": 255}
 		},
         "reverse_light": {
 			"load": ["lights:Kit3_Light_Geo_lodA.016"],
 			"texture": "other_lights",
 			"bone": "base",
-			"script": "car_script.lua",
+			"script": "lights_script.lua",
 			"color": {"r": 0,"g": 0,"b": 0,"a": 255}
 		},
         "tail_light": {
 			"load": ["lights:Kit3_Light_Geo_lodA.005"],
 			"texture": "other_lights",
 			"bone": "base",
-			"script": "car_script.lua",
+			"script": "lights_script.lua",
 			"color": {"r": 0,"g": 0,"b": 0,"a": 255}
 		},
 		
@@ -107,6 +108,38 @@
 			"bone": "steering",
 			"script": "steering_script.lua",
 			"color": {"r": 255, "g": 255,"b": 255,"a": 255}
+		},
+		
+		
+        "hours_needle": {
+			"load": ["needles:hour_needle_chrome"],
+			"texture": "chrome",
+			"bone": "clock_needle",
+			"script": "needles_script.lua",
+			"color": {"r": 255, "g": 255,"b": 255,"a": 255}
+		},
+        "hour_needle_red_part": {
+			"load": ["needles:hour_needle_red_part"],
+			"texture": "lights",
+			"bone": "clock_needle",
+			"script": "needles_script.lua",
+			"color": {"r": 40, "g": 40,"b": 40,"a": 255}
+		},
+		
+		
+        "minute_needle": {
+			"load": ["needles:minute_needle_chrome"],
+			"texture": "chrome",
+			"bone": "clock_needle",
+			"script": "needles_script.lua",
+			"color": {"r": 255, "g": 255,"b": 255,"a": 255}
+		},
+        "minute_needle_red_part": {
+			"load": ["needles:minute_needle_red_part"],
+			"texture": "lights",
+			"bone": "clock_needle",
+			"script": "needles_script.lua",
+			"color": {"r": 40, "g": 40,"b": 40,"a": 255}
 		}
     }
 }
