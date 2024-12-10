@@ -125,8 +125,6 @@
 			"script": "needles_script.lua",
 			"color": {"r": 40, "g": 40,"b": 40,"a": 255}
 		},
-		
-		
         "minute_needle": {
 			"load": ["needles:minute_needle_chrome"],
 			"texture": "chrome",
@@ -138,6 +136,81 @@
 			"load": ["needles:minute_needle_red_part"],
 			"texture": "lights",
 			"bone": "clock_needle",
+			"script": "needles_script.lua",
+			"color": {"r": 40, "g": 40,"b": 40,"a": 255}
+		},
+		
+		"rpm_needle": {
+			"load": ["needles:big_needle_chrome"],
+			"texture": "chrome",
+			"bone": "rpm_needle",
+			"script": "needles_script.lua",
+			"color": {"r": 255, "g": 255,"b": 255,"a": 255}
+		},
+        "rpm_needle_red_part": {
+			"load": ["needles:big_needle_red_part"],
+			"texture": "lights",
+			"bone": "rpm_needle",
+			"script": "needles_script.lua",
+			"color": {"r": 40, "g": 40,"b": 40,"a": 255}
+		},
+		
+		"speed_needle": {
+			"load": ["needles:medium_needle_chrome"],
+			"texture": "chrome",
+			"bone": "speed_needle",
+			"script": "needles_script.lua",
+			"color": {"r": 255, "g": 255,"b": 255,"a": 255}
+		},
+        "speed_needle_red_part": {
+			"load": ["needles:medium_needle_red_part"],
+			"texture": "lights",
+			"bone": "speed_needle",
+			"script": "needles_script.lua",
+			"color": {"r": 40, "g": 40,"b": 40,"a": 255}
+		},
+		
+		"power_needle": {
+			"load": ["needles:medium_needle_chrome"],
+			"texture": "chrome",
+			"bone": "power_needle",
+			"script": "needles_script.lua",
+			"color": {"r": 255, "g": 255,"b": 255,"a": 255}
+		},
+        "power_needle_red_part": {
+			"load": ["needles:medium_needle_red_part"],
+			"texture": "lights",
+			"bone": "power_needle",
+			"script": "needles_script.lua",
+			"color": {"r": 40, "g": 40,"b": 40,"a": 255}
+		},
+		
+		"fuel_needle": {
+			"load": ["needles:tiny_needle_chrome"],
+			"texture": "chrome",
+			"bone": "fuel_needle",
+			"script": "needles_script.lua",
+			"color": {"r": 255, "g": 255,"b": 255,"a": 255}
+		},
+        "fuel_needle_red_part": {
+			"load": ["needles:tiny_needle_red_part"],
+			"texture": "lights",
+			"bone": "fuel_needle",
+			"script": "needles_script.lua",
+			"color": {"r": 40, "g": 40,"b": 40,"a": 255}
+		},
+		
+		"temp_needle": {
+			"load": ["needles:tiny_needle_chrome"],
+			"texture": "chrome",
+			"bone": "temp_needle",
+			"script": "needles_script.lua",
+			"color": {"r": 255, "g": 255,"b": 255,"a": 255}
+		},
+        "temp_needle_red_part": {
+			"load": ["needles:tiny_needle_red_part"],
+			"texture": "lights",
+			"bone": "temp_needle",
 			"script": "needles_script.lua",
 			"color": {"r": 40, "g": 40,"b": 40,"a": 255}
 		}
