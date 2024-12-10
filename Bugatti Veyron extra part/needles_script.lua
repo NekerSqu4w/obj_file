@@ -1,6 +1,6 @@
 local obj_script = {}
 
-obj_script.off = Color(120, 40, 40)
+obj_script.off = Color(80, 40, 40)
 obj_script.on = Color(255, 40, 40)
 
 obj_script.init = function(name, obj, bone, variable, genid)
