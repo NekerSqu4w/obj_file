@@ -18,7 +18,7 @@ obj_script.update = function(name, obj, bone, variable, genid)
 		obj:setAngles(bone:localToWorldAngles(Angle(variable.hour_ang,0,0)))
     end
     if name == "hour_needle_red_part" then
-		obj:setAngles(bone:localToWorldAngles(Angle(variable.hour_angvariable.hour_ang,0,0)))
+		obj:setAngles(bone:localToWorldAngles(Angle(variable.hour_ang,0,0)))
         obj:setColor(variable.headlight > 0 and obj_script.on or obj_script.off)
     end
 	
