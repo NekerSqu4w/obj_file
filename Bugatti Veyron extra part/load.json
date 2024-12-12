@@ -40,7 +40,7 @@
 			"color": {"r": 255, "g": 255,"b": 255,"a": 255}
 		},
         "speedo_textured": {
-			"load": ["speedo_textured:Kit3_Interior_Geo_lodA.011"],
+			"load": ["speedo_textured:Kit3_Interior_Geo_lodA.030"],
 			"texture": "interior",
 			"bone": "base",
 			"color": {"r": 255,"g": 255,"b": 255,"a": 255}
