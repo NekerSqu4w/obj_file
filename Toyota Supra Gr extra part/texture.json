@@ -1,0 +1,9 @@
+{
+	"folder": "textures/",
+	"textures": {
+		"interior": {
+			"type": "VertexLitGeneric",
+			"diffuse": "LightA_diff.jpg"
+		}
+	}
+}

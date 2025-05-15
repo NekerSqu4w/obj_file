@@ -1,0 +1,16 @@
+{
+    "bones": {
+		"base": {"position": {"x": 0,"y": 0,"z": 0},"rotation": {"x": 0,"y": 0,"z": 0}}
+	},
+    "cached_mdl": {
+		"lighta": {"path": "LightA.obj"}
+	},
+    "map_models": {
+        "lighta": {
+			"load": ["lighta:Light"],
+			"texture": "interior",
+			"bone": "base",
+			"color": {"r": 255,"g": 255,"b": 255,"a": 255}
+		}
+    }
+}
