@@ -1,6 +1,6 @@
 {
     "bones": {
-		"base": {"position": {"x": 0,"y": 0,"z": -3},"rotation": {"x": 0,"y": 0,"z": 0},"scale": {"x": 4.3,"y": 4.3,"z": 4.3}}
+		"base": {"position": {"x": 0,"y": 0,"z": 0},"rotation": {"x": 0,"y": 0,"z": 0},"scale": {"x": 4.3,"y": 4.3,"z": 4.3}}
 	},
     "cached_mdl": {
 		"lighta": {"path": "LightA.obj"}
