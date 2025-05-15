@@ -3,15 +3,15 @@
 	"textures": {
 		"lights": {
 			"type": "VertexLitGeneric",
-			"diffuse": "LightA_diff.jpg"
+			"diffuse": "LightA_diff.png"
 		},
 		"interior": {
 			"type": "VertexLitGeneric",
-			"diffuse": "InteriorA_diff.jpg"
+			"diffuse": "InteriorA_diff.png"
 		},
 		"engine": {
 			"type": "VertexLitGeneric",
-			"diffuse": "EngineA_diff.jpg"
+			"diffuse": "EngineA_diff.png"
 		}
 	}
 }
