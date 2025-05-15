@@ -3,14 +3,28 @@
 		"base": {"position": {"x": 0,"y": 0,"z": 0},"rotation": {"x": 0,"y": 0,"z": 0},"scale": {"x": 4.3,"y": 4.3,"z": 4.3}}
 	},
     "cached_mdl": {
-		"lighta": {"path": "LightA.obj"}
+		"lights": {"path": "LightA.obj"},
+		"interior_detail": {"path": "interior_detail.obj"},
+		"detailed_engine": {"path": "detailed_engine.obj"}
 	},
     "map_models": {
-        "lighta": {
-			"load": ["lighta:Light"],
+        "lights": {
+			"load": ["lights:Light"],
+			"texture": "lights",
+			"bone": "base",
+			"color": {"r": 255,"g": 255,"b": 255,"a": 255}
+		},
+        "interior": {
+			"load": ["interior_detail:Interior.002"],
 			"texture": "interior",
 			"bone": "base",
 			"color": {"r": 255,"g": 255,"b": 255,"a": 255}
-		}
+		},
+        "engine": {
+			"load": ["detailed_engine:Engine"],
+			"texture": "engine",
+			"bone": "base",
+			"color": {"r": 255,"g": 255,"b": 255,"a": 255}
+		},
     }
 }
