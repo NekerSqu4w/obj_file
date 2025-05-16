@@ -5,7 +5,8 @@
     "cached_mdl": {
 		"lights": {"path": "LightA.obj"},
 		"detailed_interior": {"path": "detailed_interior.obj"},
-		"detailed_engine": {"path": "detailed_engine.obj"}
+		"detailed_engine": {"path": "detailed_engine.obj"},
+		"badges": {"path": "badges.obj"}
 	},
     "map_models": {
         "lights": {
@@ -21,7 +22,7 @@
 			"color": {"r": 255,"g": 255,"b": 255,"a": 255}
 		},
         "badges": {
-			"load": ["detailed_interior:Badge.001"],
+			"load": ["badges:Badge.003"],
 			"texture": "badges",
 			"bone": "base",
 			"color": {"r": 255,"g": 255,"b": 255,"a": 255}
