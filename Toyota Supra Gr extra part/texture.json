@@ -9,7 +9,7 @@
 			"type": "VertexLitGeneric",
 			"diffuse": "InteriorA_diff.png"
 		},
-		"badgesA": {
+		"badges": {
 			"type": "VertexLitGeneric",
 			"diffuse": "BadgeA_diff.png"
 		},
