@@ -11,11 +11,13 @@
 		},
 		"badges": {
 			"type": "VertexLitGeneric",
-			"diffuse": "BadgeA_diff.png"
+			"diffuse": "BadgeA_diff.png",
+			"normal": "BadgeA_nrml.png"
 		},
 		"engine": {
 			"type": "VertexLitGeneric",
-			"diffuse": "EngineA_diff.png"
+			"diffuse": "EngineA_diff.png",
+			"normal": "EngineA_nrml.png"
 		}
 	}
 }
