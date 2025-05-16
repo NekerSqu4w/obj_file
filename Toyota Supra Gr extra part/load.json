@@ -15,7 +15,7 @@
 			"color": {"r": 255,"g": 255,"b": 255,"a": 255}
 		},
         "interior": {
-			"load": ["detailed_interior:Interior.002"],
+			"load": ["detailed_interior:Interior.001"],
 			"texture": "interior",
 			"bone": "base",
 			"color": {"r": 255,"g": 255,"b": 255,"a": 255}
