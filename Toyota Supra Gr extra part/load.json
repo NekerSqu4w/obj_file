@@ -10,7 +10,7 @@
 	},
     "map_models": {
         "lights": {
-			"load": ["lights:Light"],
+			"load": ["lights:Badge.002"],
 			"texture": "lights",
 			"bone": "base",
 			"color": {"r": 255,"g": 255,"b": 255,"a": 255}
