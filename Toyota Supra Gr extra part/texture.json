@@ -9,6 +9,10 @@
 			"type": "VertexLitGeneric",
 			"diffuse": "InteriorA_diff.png"
 		},
+		"badgesA": {
+			"type": "VertexLitGeneric",
+			"diffuse": "BadgeA_diff.png"
+		},
 		"engine": {
 			"type": "VertexLitGeneric",
 			"diffuse": "EngineA_diff.png"

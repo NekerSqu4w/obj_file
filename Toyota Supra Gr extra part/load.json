@@ -20,11 +20,17 @@
 			"bone": "base",
 			"color": {"r": 255,"g": 255,"b": 255,"a": 255}
 		},
+        "badges": {
+			"load": ["detailed_interior:Badge.001"],
+			"texture": "badgesA",
+			"bone": "base",
+			"color": {"r": 255,"g": 255,"b": 255,"a": 255}
+		},
         "engine": {
 			"load": ["detailed_engine:Engine"],
 			"texture": "engine",
 			"bone": "base",
 			"color": {"r": 255,"g": 255,"b": 255,"a": 255}
-		},
+		}
     }
 }
