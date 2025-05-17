@@ -17,5 +17,14 @@
 			"texture": "badges",
 			"bone": "base"
 		}
-    }
+    },
+	"textures": {
+		"lights": {
+			"diffuse": "LightA_diff.png"
+		},
+		"badges": {
+			"diffuse": "BadgeA_diff.png",
+			"normal": "BadgeA_nrml.png"
+		}
+	}
 }
