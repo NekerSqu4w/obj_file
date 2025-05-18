@@ -1,30 +1,30 @@
 {
-    "bones": {
-		"base": {"position": {"x": 0,"y": 0,"z": 0},"rotation": {"x": 0,"y": 0,"z": 0},"scale": {"x": 4.3,"y": 4.3,"z": 4.3}}
+	"bones": {
+		"base": {"position": {"x": 0,"y": 0,"z": 0}, "rotation": {"x": 0,"y": 0,"z": 0}, "scale": {"x": 4.3,"y": 4.3,"z": 4.3}}
 	},
-    "cached_mdl": {
-		"lights": {"path": "LightA.obj"},
-		"badges": {"path": "badges.obj"}
+	"load_models": {
+		"lights_mdl": {"path": "LightA.obj"},
+		"badges_mdl": {"path": "badges.obj"}
 	},
-    "map_models": {
-        "lights": {
-			"load": ["lights:Badge.002"],
-			"texture": "lights",
-			"bone": "base"
+	"load_textures": {
+		"lights_tex": {
+			"diffuse": "textures/LightA_diff.png"
 		},
-        "badges": {
-			"load": ["badges:Badge.003"],
-			"texture": "badges",
-			"bone": "base"
+		"badges_tex": {
+			"diffuse": "textures/BadgeA_diff.png",
+			"normal": "textures/BadgeA_nrml.png"
 		}
-    },
-	"textures": {
+	},
+	"setup": {
 		"lights": {
-			"diffuse": "LightA_diff.png"
+			"load": ["lights_mdl:Light.001"],
+			"use_texture": "lights_tex",
+			"parent": "base"
 		},
 		"badges": {
-			"diffuse": "BadgeA_diff.png",
-			"normal": "BadgeA_nrml.png"
+			"load": ["badges_mdl:Badge.001"],
+			"use_texture": "badges_tex",
+			"parent": "base"
 		}
 	}
 }
