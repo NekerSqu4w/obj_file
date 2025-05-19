@@ -11,31 +11,31 @@
 	"load_textures": {
 		"lights_tex": {
 			"diffuse": "root_path:textures/LightA_diff.png",
-			"params": {
-				"phong": 1
-			}
+			"int": [
+				["phong", 1]
+			]
 		},
 		"badges_tex": {
 			"diffuse": "root_path:textures/BadgeA_diff.png",
 			"normal": "root_path:textures/BadgeA_nrml.png",
 			"metallic": 0.1,
-			"params": {
-				"phong": 1
-			}
+			"int": [
+				["phong", 1]
+			]
 		},
 		"interior": {
 			"diffuse": "root_path:textures/InteriorA_diff.png",
 			"normal": "root_path:textures/InteriorA_nrml.png",
-			"params": {
-				"phong": 1
-			}
+			"int": [
+				["phong", 1]
+			]
 		},
 		"engine": {
 			"diffuse": "root_path:textures/EngineA_diff.png",
 			"normal": "root_path:textures/EngineA_nrml.png",
-			"params": {
-				"phong": 1
-			}
+			"int": [
+				["phong", 1]
+			]
 		}
 	},
 	"setup": {
