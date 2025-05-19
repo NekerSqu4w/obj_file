@@ -4,16 +4,38 @@
 	},
 	"load_models": {
 		"lights_mdl": {"path": "LightA.obj"},
-		"badges_mdl": {"path": "badges.obj"}
+		"badges_mdl": {"path": "badges.obj"},
+		"detailed_interior": {"path": "detailed_interior.obj"},
+		"detailed_engine": {"path": "detailed_engine.obj"}
 	},
 	"load_textures": {
 		"lights_tex": {
-			"diffuse": "root_path:textures/LightA_diff.png"
+			"diffuse": "root_path:textures/LightA_diff.png",
+			"params": {
+				"phong": 1
+			}
 		},
 		"badges_tex": {
 			"diffuse": "root_path:textures/BadgeA_diff.png",
 			"normal": "root_path:textures/BadgeA_nrml.png",
-			"metallic": 0.1
+			"metallic": 0.1,
+			"params": {
+				"phong": 1
+			}
+		},
+		"interior": {
+			"diffuse": "root_path:textures/InteriorA_diff.png",
+			"normal": "root_path:textures/InteriorA_nrml.png",
+			"params": {
+				"phong": 1
+			}
+		},
+		"engine": {
+			"diffuse": "root_path:textures/EngineA_diff.png",
+			"normal": "root_path:textures/EngineA_nrml.png",
+			"params": {
+				"phong": 1
+			}
 		}
 	},
 	"setup": {
@@ -26,6 +48,16 @@
 			"load": ["badges_mdl:Badge.001"],
 			"use_texture": "badges_tex",
 			"parent": "base"
+		},
+        "interior": {
+			"load": ["detailed_interior:Interior.001"],
+			"texture": "interior",
+			"bone": "base"
+		},
+        "engine": {
+			"load": ["detailed_engine:Engine"],
+			"texture": "engine",
+			"bone": "base"
 		}
 	}
 }
