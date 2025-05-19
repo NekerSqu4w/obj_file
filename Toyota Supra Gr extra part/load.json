@@ -51,13 +51,13 @@
 		},
         "interior": {
 			"load": ["detailed_interior:Interior.001"],
-			"texture": "interior",
-			"bone": "base"
+			"use_texture": "interior",
+			"parent": "base"
 		},
         "engine": {
 			"load": ["detailed_engine:Engine"],
-			"texture": "engine",
-			"bone": "base"
+			"use_texture": "engine",
+			"parent": "base"
 		}
 	}
 }
