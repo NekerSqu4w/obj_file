@@ -13,7 +13,7 @@
 		"badges_tex": {
 			"diffuse": "textures/BadgeA_diff.png",
 			"normal": "textures/BadgeA_nrml.png",
-			"mettalic": 0.1
+			"metallic": 0.1
 		}
 	},
 	"setup": {
