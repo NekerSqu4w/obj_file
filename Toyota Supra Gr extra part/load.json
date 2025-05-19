@@ -13,7 +13,7 @@
 			"diffuse": "root_path:textures/LightA_diff.png",
 			"int": [
 				["phong", 1],
-				["phongexponent", 200]
+				["phongexponent", 1500]
 			]
 		},
 		"badges_tex": {
@@ -21,23 +21,26 @@
 			"normal": "root_path:textures/BadgeA_nrml.png",
 			"metallic": 0.1,
 			"int": [
-				["phong", 1]
+				["phong", 1],
+				["phongexponent", 70]
 			]
 		},
 		"interior": {
 			"diffuse": "root_path:textures/InteriorA_diff.png",
 			"normal": "root_path:textures/InteriorA_nrml.png",
+			"metallic": 0.1,
 			"int": [
 				["phong", 1],
-				["phongexponent", 200]
+				["phongexponent", 1500]
 			]
 		},
 		"engine": {
 			"diffuse": "root_path:textures/EngineA_diff.png",
 			"normal": "root_path:textures/EngineA_nrml.png",
+			"metallic": 0.1,
 			"int": [
 				["phong", 1],
-				["phongexponent", 200]
+				["phongexponent", 800]
 			]
 		}
 	},
