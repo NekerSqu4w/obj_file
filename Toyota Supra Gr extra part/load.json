@@ -8,8 +8,7 @@
 	},
 	"load_textures": {
 		"lights_tex": {
-			"diffuse": "root_path:textures/LightA_diff.png",
-			"normal": "dev/bump_normal"
+			"diffuse": "root_path:textures/LightA_diff.png"
 		},
 		"badges_tex": {
 			"diffuse": "root_path:textures/BadgeA_diff.png",
