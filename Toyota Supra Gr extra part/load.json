@@ -12,7 +12,8 @@
 		"lights_tex": {
 			"diffuse": "root_path:textures/LightA_diff.png",
 			"int": [
-				["phong", 1]
+				["phong", 1],
+				["phongexponent", 200]
 			]
 		},
 		"badges_tex": {
@@ -27,14 +28,16 @@
 			"diffuse": "root_path:textures/InteriorA_diff.png",
 			"normal": "root_path:textures/InteriorA_nrml.png",
 			"int": [
-				["phong", 1]
+				["phong", 1],
+				["phongexponent", 200]
 			]
 		},
 		"engine": {
 			"diffuse": "root_path:textures/EngineA_diff.png",
 			"normal": "root_path:textures/EngineA_nrml.png",
 			"int": [
-				["phong", 1]
+				["phong", 1],
+				["phongexponent", 200]
 			]
 		}
 	},
