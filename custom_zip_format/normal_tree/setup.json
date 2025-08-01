@@ -1,0 +1,38 @@
+{
+	"load_obj": "tree.obj",
+	"make_mdl": [
+		{
+			"part": "bark",
+			"texture": "bark_tex"
+		},
+		{
+			"part": "leaves",
+			"texture": "leaves_tex"
+		}
+	],
+	"textures": {
+		"bark_tex": {
+			"diffuse": "bark_diffuse.jpg",
+			"param": {
+				"int": {
+					"$flags": 256
+				}
+			}
+		},
+		"leaves_tex": {
+			"diffuse": "leave_diffuse.png",
+			"param": {
+				"int": {
+					"$flags": 256,
+					"$treeSway": 2,
+					"$treeSwayStatic": 1
+				},
+				"float": {
+					"$treeSwayScrumbleStrength": 0.2,
+					"$treeSwayScrumbleFrequency": 10,
+					"$treeSwayScrumbleFalloffExp": 2
+				}
+			}
+		}
+	}
+}
